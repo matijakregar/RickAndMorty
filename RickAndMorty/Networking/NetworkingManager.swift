@@ -103,3 +103,22 @@ class NetworkingManager {
 	}
 	
 }
+
+
+// GraphQL convenience methods
+typealias ListResult<T: Queryable & Decodable> = Result<ListResponse<T>, Error>
+typealias ObjectResult<T: Queryable & Decodable> = Result<ObjectResponse<T>, Error>
+
+extension NetworkingManager {
+	
+	@discardableResult
+	static func listRequest<T: Queryable & Decodable>(page: Int, completion: @escaping (ListResult<T>) -> Void) -> URLSessionDataTask? {
+		return self.request(QueryEndpoint(query: Query<Character>.list(page: page)), completion: completion)
+	}
+	
+	@discardableResult
+	static func objectRequest<T: Queryable & Decodable>(id: String, completion: @escaping (ObjectResult<T>) -> Void) -> URLSessionDataTask? {
+		return self.request(QueryEndpoint(query: Query<Character>.object(id: id)), completion: completion)
+	}
+	
+}
