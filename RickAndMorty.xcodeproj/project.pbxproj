@@ -15,6 +15,8 @@
 		D4109D9C2293EFA200597A49 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109D9B2293EFA200597A49 /* Endpoint.swift */; };
 		D4109D9E2293EFD100597A49 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109D9D2293EFD100597A49 /* NetworkingError.swift */; };
 		D4109DA02293F0A500597A49 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109D9F2293F0A500597A49 /* HTTPMethod.swift */; };
+		D4109DA22293F0DA00597A49 /* DecodingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DA12293F0DA00597A49 /* DecodingManager.swift */; };
+		D4109DA42293F0FF00597A49 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DA32293F0FF00597A49 /* NetworkingManager.swift */; };
 		D4109DA62293F22E00597A49 /* QueryEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DA52293F22E00597A49 /* QueryEndpoint.swift */; };
 		D4109DA82293F41600597A49 /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DA72293F41600597A49 /* ParameterEncoder.swift */; };
 		D4109DAB2293F43E00597A49 /* HeaderEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DAA2293F43E00597A49 /* HeaderEncoder.swift */; };
@@ -56,6 +58,8 @@
 		D4109D9B2293EFA200597A49 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		D4109D9D2293EFD100597A49 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
 		D4109D9F2293F0A500597A49 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		D4109DA12293F0DA00597A49 /* DecodingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodingManager.swift; sourceTree = "<group>"; };
+		D4109DA32293F0FF00597A49 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		D4109DA52293F22E00597A49 /* QueryEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryEndpoint.swift; sourceTree = "<group>"; };
 		D4109DA72293F41600597A49 /* ParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
 		D4109DAA2293F43E00597A49 /* HeaderEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderEncoder.swift; sourceTree = "<group>"; };
@@ -204,6 +208,8 @@
 				D4109DA52293F22E00597A49 /* QueryEndpoint.swift */,
 				D4109D9D2293EFD100597A49 /* NetworkingError.swift */,
 				D4109D9F2293F0A500597A49 /* HTTPMethod.swift */,
+				D4109DA32293F0FF00597A49 /* NetworkingManager.swift */,
+				D4109DA12293F0DA00597A49 /* DecodingManager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -325,7 +331,9 @@
 				D4580FB62292A16200D0E8F7 /* SecondViewController.swift in Sources */,
 				D4580FB22292A16200D0E8F7 /* AppDelegate.swift in Sources */,
 				D4109DA02293F0A500597A49 /* HTTPMethod.swift in Sources */,
+				D4109DA22293F0DA00597A49 /* DecodingManager.swift in Sources */,
 				D4580FD82292B51E00D0E8F7 /* Location.swift in Sources */,
+				D4109DA42293F0FF00597A49 /* NetworkingManager.swift in Sources */,
 				D4580FB42292A16200D0E8F7 /* FirstViewController.swift in Sources */,
 				D487F7B62293430C0019D9B3 /* Query.swift in Sources */,
 				D4109DAD2293F45800597A49 /* PostParameterEncoder.swift in Sources */,
