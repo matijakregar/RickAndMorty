@@ -20,6 +20,7 @@
 		D4580FD82292B51E00D0E8F7 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4580FD72292B51E00D0E8F7 /* Location.swift */; };
 		D4580FDB2292C24800D0E8F7 /* Queryable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4580FDA2292C24800D0E8F7 /* Queryable.swift */; };
 		D487F7B422933FE60019D9B3 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = D487F7B322933FE60019D9B3 /* Info.swift */; };
+		D487F7B62293430C0019D9B3 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = D487F7B52293430C0019D9B3 /* Query.swift */; };
 		D487F7B822934F640019D9B3 /* ListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D487F7B722934F640019D9B3 /* ListResponse.swift */; };
 		D487F7BB229352B40019D9B3 /* Character.json in Resources */ = {isa = PBXBuildFile; fileRef = D487F7BA229352B40019D9B3 /* Character.json */; };
 		D487F7BD229352DB0019D9B3 /* Characters.json in Resources */ = {isa = PBXBuildFile; fileRef = D487F7BC229352DB0019D9B3 /* Characters.json */; };
@@ -54,6 +55,7 @@
 		D4580FD72292B51E00D0E8F7 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		D4580FDA2292C24800D0E8F7 /* Queryable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queryable.swift; sourceTree = "<group>"; };
 		D487F7B322933FE60019D9B3 /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
+		D487F7B52293430C0019D9B3 /* Query.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
 		D487F7B722934F640019D9B3 /* ListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListResponse.swift; sourceTree = "<group>"; };
 		D487F7BA229352B40019D9B3 /* Character.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Character.json; sourceTree = "<group>"; };
 		D487F7BC229352DB0019D9B3 /* Characters.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Characters.json; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 		D4580FB02292A16200D0E8F7 /* RickAndMorty */ = {
 			isa = PBXGroup;
 			children = (
+				D4580FD42292A4ED00D0E8F7 /* Networking */,
 				D4580FD32292A4DD00D0E8F7 /* Model */,
 				D4580FB12292A16200D0E8F7 /* AppDelegate.swift */,
 				D4580FB32292A16200D0E8F7 /* FirstViewController.swift */,
@@ -149,6 +152,14 @@
 				D487F7B322933FE60019D9B3 /* Info.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D4580FD42292A4ED00D0E8F7 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D487F7B52293430C0019D9B3 /* Query.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		D487F7B9229352970019D9B3 /* Samples */ = {
@@ -269,6 +280,7 @@
 				D4580FB22292A16200D0E8F7 /* AppDelegate.swift in Sources */,
 				D4580FD82292B51E00D0E8F7 /* Location.swift in Sources */,
 				D4580FB42292A16200D0E8F7 /* FirstViewController.swift in Sources */,
+				D487F7B62293430C0019D9B3 /* Query.swift in Sources */,
 				D487F7B822934F640019D9B3 /* ListResponse.swift in Sources */,
 				D4580FDB2292C24800D0E8F7 /* Queryable.swift in Sources */,
 				D4109D932293D37000597A49 /* ObjectResponse.swift in Sources */,
