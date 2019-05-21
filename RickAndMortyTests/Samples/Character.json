@@ -1,0 +1,17 @@
+{
+	"data": {
+		"character": {
+			"id": "21",
+			"name": "Aqua Morty",
+			"image": "https://rickandmortyapi.com/api/character/avatar/21.jpeg",
+			"origin": {
+				"id": null,
+				"name": "unknown"
+			},
+			"location": {
+				"id": "3",
+				"name": "Citadel of Ricks"
+			}
+		}
+	}
+}
