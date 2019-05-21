@@ -10,11 +10,15 @@ import Foundation
 
 struct Character: Decodable {
 	
+	// MARK: - Properties
+	
 	let id: String
 	let name: String
 	let imageURL: URL
 	let location: Location?
 	let origin: Location?
+	
+	// MARK: - Coding keys
 	
 	enum CodingKeys: String, CodingKey {
 		case id
@@ -22,6 +26,41 @@ struct Character: Decodable {
 		case imageURL = "image"
 		case origin
 		case location
+	}
+	
+}
+
+// MARK: - Queryable
+
+extension Character.CodingKeys: QueryKey {
+	// Define how the query is generated and which properties have nested queries.
+	var queryParameter: String {
+		switch self {
+		case .location, .origin:
+			return stringValue + " " + Location.shortQuery
+		default:
+			return stringValue
+		}
+	}
+	
+}
+
+extension Character: Queryable {
+	
+	static var shortQuery: String {
+		return query(for: [
+			.id,
+			.name,
+			.imageURL
+			])
+	}
+	
+	static var objectKey: String {
+		return "character"
+	}
+	
+	static var listKey: String {
+		return "characters"
 	}
 	
 }

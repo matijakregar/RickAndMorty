@@ -16,6 +16,7 @@
 		D4580FC92292A16300D0E8F7 /* RickAndMortyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4580FC82292A16300D0E8F7 /* RickAndMortyTests.swift */; };
 		D4580FD62292B51500D0E8F7 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4580FD52292B51500D0E8F7 /* Character.swift */; };
 		D4580FD82292B51E00D0E8F7 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4580FD72292B51E00D0E8F7 /* Location.swift */; };
+		D4580FDB2292C24800D0E8F7 /* Queryable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4580FDA2292C24800D0E8F7 /* Queryable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		D4580FCA2292A16300D0E8F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4580FD52292B51500D0E8F7 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		D4580FD72292B51E00D0E8F7 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		D4580FDA2292C24800D0E8F7 /* Queryable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queryable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D4109D942293DB0A00597A49 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D4580FDA2292C24800D0E8F7 /* Queryable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		D4580FA52292A16200D0E8F7 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +117,7 @@
 		D4580FD32292A4DD00D0E8F7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D4109D942293DB0A00597A49 /* Protocols */,
 				D4580FD52292B51500D0E8F7 /* Character.swift */,
 				D4580FD72292B51E00D0E8F7 /* Location.swift */,
 			);
@@ -218,6 +229,7 @@
 				D4580FB22292A16200D0E8F7 /* AppDelegate.swift in Sources */,
 				D4580FD82292B51E00D0E8F7 /* Location.swift in Sources */,
 				D4580FB42292A16200D0E8F7 /* FirstViewController.swift in Sources */,
+				D4580FDB2292C24800D0E8F7 /* Queryable.swift in Sources */,
 				D4580FD62292B51500D0E8F7 /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
