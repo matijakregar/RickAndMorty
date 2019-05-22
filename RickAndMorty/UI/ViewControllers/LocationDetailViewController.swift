@@ -1,5 +1,5 @@
 //
-//  CharacterDetailViewController.swift
+//  LocationDetailViewController.swift
 //  RickAndMorty
 //
 //  Created by Matija Kregar on 22/05/2019.
@@ -8,14 +8,13 @@
 
 import UIKit
 
-class CharacterDetailViewController: UITableViewController {
+class LocationDetailViewController: UITableViewController {
 	
 	@IBOutlet private var headerContainerView: UIView!
 	@IBOutlet private var footerContainerView: UIView!
-	@IBOutlet private var characterImageView: UIImageView!
-	@IBOutlet private var characterNameLabel: UILabel!
+	@IBOutlet private var locationNameLabel: UILabel!
 	
-	var viewModel: CharacterDetailViewModel?
+	var viewModel: LocationDetailViewModel?
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -24,22 +23,19 @@ class CharacterDetailViewController: UITableViewController {
 		
 		headerContainerView.layer.cornerRadius = Theme.View.cornerRadius
 		footerContainerView.layer.cornerRadius = Theme.View.cornerRadius
-		
-		tableView.tableHeaderView?.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.width)
-		
-		guard let character = viewModel?.character
+				
+		guard let location = viewModel?.location
 			else {
 				return
 		}
 		
-		characterImageView.loadImage(from: character.imageURL)
-		characterNameLabel.text = character.name
+		locationNameLabel.text = location.name
 		
 		loadContent()
 	}
 	
 	private func loadContent() {
-		viewModel?.loadCharacter(completion: { [weak self] (result) in
+		viewModel?.loadLocation(completion: { [weak self] (result) in
 			DispatchQueue.main.async {
 				switch result {
 				case .success:
@@ -53,37 +49,28 @@ class CharacterDetailViewController: UITableViewController {
 	}
 	
 	private func isSelectable(row: Int) -> Bool {
-		guard let locationItem = viewModel?.propertyListItems[row] as? LocationItem,
-			locationItem.location.id != .none
+		guard let charactersItem = viewModel?.propertyListItems[row] as? CharactersItem,
+			charactersItem.characters.count > 0
 			else {
 				return false
 		}
 		return true
 	}
 	
-	
+	/*
 	// MARK: - Navigation
-	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		switch segue.identifier {
-		case Segue.showLocationDetail:
-			guard let selectedRow = tableView.indexPathForSelectedRow?.row,
-				let locationDetailViewController = segue.destination as? LocationDetailViewController,
-				let locationItem = viewModel?.propertyListItems[selectedRow] as? LocationItem
-				else {
-					return
-			}
-			let locationDetailViewModel = LocationDetailViewModel(location: locationItem.location)
-			locationDetailViewController.viewModel = locationDetailViewModel
-		default:
-			break
-		}
-	}
 	
+	// In a storyboard-based application, you will often want to do a little preparation before navigation
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+	// Get the new view controller using segue.destination.
+	// Pass the selected object to the new view controller.
+	}
+	*/
 	
 }
 
 // MARK: - UITableViewDataSource
-extension CharacterDetailViewController {
+extension LocationDetailViewController {
 	
 	override func numberOfSections(in tableView: UITableView) -> Int {
 		return 1
@@ -110,7 +97,7 @@ extension CharacterDetailViewController {
 }
 
 // MARK: - UITableViewDelegate
-extension CharacterDetailViewController {
+extension LocationDetailViewController {
 	
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		guard isSelectable(row: indexPath.row)
@@ -118,7 +105,6 @@ extension CharacterDetailViewController {
 				tableView.deselectRow(at: indexPath, animated: false)
 				return
 		}
-		performSegue(withIdentifier: Segue.showLocationDetail, sender: nil)
 	}
 	
 	override func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {

@@ -11,6 +11,7 @@ import Foundation
 struct Segue {
 	
 	static let showCharacterDetail = "showCharacterDetail"
+	static let showLocationDetail = "showLocationDetail"
 	
 }
 

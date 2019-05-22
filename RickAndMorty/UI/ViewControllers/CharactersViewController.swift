@@ -49,8 +49,6 @@ class CharactersViewController: UITableViewController {
 		default:
 			break
 		}
-		
-		
 	}
 	
 }

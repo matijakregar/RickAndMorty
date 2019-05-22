@@ -45,6 +45,7 @@
 		D4109DE82295720200597A49 /* PropertyListDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DE72295720200597A49 /* PropertyListDisplayable.swift */; };
 		D4109DEA229572E100597A49 /* BasicPropertyListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DE9229572E100597A49 /* BasicPropertyListItem.swift */; };
 		D4109DEC2295734700597A49 /* LocationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DEB2295734700597A49 /* LocationItem.swift */; };
+		D4109DEE22958F7300597A49 /* LocationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DED22958F7300597A49 /* LocationDetailViewController.swift */; };
 		D4109DF02295912C00597A49 /* CharactersItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DEF2295912C00597A49 /* CharactersItem.swift */; };
 		D4109DF22295920500597A49 /* LocationDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DF12295920500597A49 /* LocationDetailViewModel.swift */; };
 		D4580FB22292A16200D0E8F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4580FB12292A16200D0E8F7 /* AppDelegate.swift */; };
@@ -113,6 +114,7 @@
 		D4109DE72295720200597A49 /* PropertyListDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListDisplayable.swift; sourceTree = "<group>"; };
 		D4109DE9229572E100597A49 /* BasicPropertyListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicPropertyListItem.swift; sourceTree = "<group>"; };
 		D4109DEB2295734700597A49 /* LocationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationItem.swift; sourceTree = "<group>"; };
+		D4109DED22958F7300597A49 /* LocationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailViewController.swift; sourceTree = "<group>"; };
 		D4109DEF2295912C00597A49 /* CharactersItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersItem.swift; sourceTree = "<group>"; };
 		D4109DF12295920500597A49 /* LocationDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailViewModel.swift; sourceTree = "<group>"; };
 		D4580FAE2292A16200D0E8F7 /* RickAndMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -230,6 +232,7 @@
 			children = (
 				D4109DBA2294267D00597A49 /* CharactersViewController.swift */,
 				D4109DDC229567D600597A49 /* CharacterDetailViewController.swift */,
+				D4109DED22958F7300597A49 /* LocationDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -514,6 +517,7 @@
 				D4109DC02295294600597A49 /* NibBackedCell.swift in Sources */,
 				D4109D9C2293EFA200597A49 /* Endpoint.swift in Sources */,
 				D4109DDB2295643100597A49 /* UIColor.swift in Sources */,
+				D4109DEE22958F7300597A49 /* LocationDetailViewController.swift in Sources */,
 				D4109DCA2295306900597A49 /* CharacterListDisplayable.swift in Sources */,
 				D4109DE022956BFC00597A49 /* Segue.swift in Sources */,
 				D4109DA62293F22E00597A49 /* QueryEndpoint.swift in Sources */,
