@@ -1,5 +1,5 @@
 //
-//  CharacterListDisplayable.swift
+//  Segue.swift
 //  RickAndMorty
 //
 //  Created by Matija Kregar on 22/05/2019.
@@ -8,10 +8,9 @@
 
 import Foundation
 
-protocol CharacterListDisplayable {
+struct Segue {
 	
-	var name: String { get }
-	var species: String { get }
-	var imageURL: URL { get }
+	static let showCharacterDetail = "showCharacterDetail"
 	
 }
+

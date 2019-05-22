@@ -1,5 +1,5 @@
 //
-//  CharacterListDisplayable.swift
+//  PropertyListDisplayable.swift
 //  RickAndMorty
 //
 //  Created by Matija Kregar on 22/05/2019.
@@ -8,10 +8,9 @@
 
 import Foundation
 
-protocol CharacterListDisplayable {
+protocol PropertyListDisplayable {
 	
 	var name: String { get }
-	var species: String { get }
-	var imageURL: URL { get }
+	var value: CustomStringConvertible { get }
 	
 }

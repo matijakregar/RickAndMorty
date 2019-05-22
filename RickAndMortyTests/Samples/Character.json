@@ -3,6 +3,7 @@
 		"character": {
 			"id": "21",
 			"name": "Aqua Morty",
+			"species": "Humanoid",
 			"image": "https://rickandmortyapi.com/api/character/avatar/21.jpeg",
 			"origin": {
 				"id": null,

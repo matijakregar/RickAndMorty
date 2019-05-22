@@ -14,6 +14,7 @@ struct Character: Decodable {
 	
 	let id: String
 	let name: String
+	let species: String
 	let imageURL: URL
 	let location: Location?
 	let origin: Location?
@@ -23,6 +24,7 @@ struct Character: Decodable {
 	enum CodingKeys: String, CodingKey {
 		case id
 		case name
+		case species
 		case imageURL = "image"
 		case origin
 		case location
@@ -51,6 +53,7 @@ extension Character: Queryable {
 		return query(for: [
 			.id,
 			.name,
+			.species,
 			.imageURL
 			])
 	}

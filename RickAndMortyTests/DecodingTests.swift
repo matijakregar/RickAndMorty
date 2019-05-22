@@ -24,6 +24,7 @@ class DecodingTests: XCTestCase {
 			
 			XCTAssertEqual(character.id, "21")
 			XCTAssertEqual(character.name, "Aqua Morty")
+			XCTAssertEqual(character.species, "Humanoid")
 			XCTAssertEqual(character.imageURL, URL(string: "https://rickandmortyapi.com/api/character/avatar/21.jpeg")!)
 			
 			XCTAssertNil(character.origin?.id)
@@ -60,6 +61,7 @@ class DecodingTests: XCTestCase {
 			
 			XCTAssertEqual(firstCharacter.id, "1")
 			XCTAssertEqual(firstCharacter.name, "Rick Sanchez")
+			XCTAssertEqual(firstCharacter.species, "Human")
 			XCTAssertEqual(firstCharacter.imageURL, URL(string: "https://rickandmortyapi.com/api/character/avatar/1.jpeg")!)			
 		}
 		catch {
