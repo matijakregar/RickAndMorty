@@ -52,6 +52,7 @@
 		D4109DF722959A1600597A49 /* PagedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DF622959A1600597A49 /* PagedViewModel.swift */; };
 		D4109DF922959A6400597A49 /* DataReloadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DF822959A6400597A49 /* DataReloadable.swift */; };
 		D4109DFE22959F6200597A49 /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DFD22959F6200597A49 /* FavoritesManager.swift */; };
+		D4109E002295A94C00597A49 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DFF2295A94C00597A49 /* UIButton.swift */; };
 		D4580FB22292A16200D0E8F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4580FB12292A16200D0E8F7 /* AppDelegate.swift */; };
 		D4580FB92292A16200D0E8F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4580FB72292A16200D0E8F7 /* Main.storyboard */; };
 		D4580FBB2292A16300D0E8F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4580FBA2292A16300D0E8F7 /* Assets.xcassets */; };
@@ -123,6 +124,7 @@
 		D4109DF622959A1600597A49 /* PagedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagedViewModel.swift; sourceTree = "<group>"; };
 		D4109DF822959A6400597A49 /* DataReloadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataReloadable.swift; sourceTree = "<group>"; };
 		D4109DFD22959F6200597A49 /* FavoritesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesManager.swift; sourceTree = "<group>"; };
+		D4109DFF2295A94C00597A49 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		D4580FAE2292A16200D0E8F7 /* RickAndMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4580FB12292A16200D0E8F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4580FB82292A16200D0E8F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 				D4109DCF229534E300597A49 /* TimeInterval.swift */,
 				D4109DD82295621600597A49 /* UIRefreshControl.swift */,
 				D4109DDA2295643100597A49 /* UIColor.swift */,
+				D4109DFF2295A94C00597A49 /* UIButton.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -519,6 +522,7 @@
 				D4109DAD2293F45800597A49 /* PostParameterEncoder.swift in Sources */,
 				D4109DB52294209A00597A49 /* CharactersViewModelDelegate.swift in Sources */,
 				D4109D9E2293EFD100597A49 /* NetworkingError.swift in Sources */,
+				D4109E002295A94C00597A49 /* UIButton.swift in Sources */,
 				D4109DAB2293F43E00597A49 /* HeaderEncoder.swift in Sources */,
 				D4109DD7229551D100597A49 /* Theme.swift in Sources */,
 				D4109DBB2294267D00597A49 /* CharactersViewController.swift in Sources */,

@@ -110,20 +110,31 @@
                             </constraints>
                         </view>
                         <view key="tableFooterView" clipsSubviews="YES" contentMode="scaleToFill" id="hmd-dW-MMF">
-                            <rect key="frame" x="0.0" y="371" width="414" height="24"/>
+                            <rect key="frame" x="0.0" y="371" width="414" height="103"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MSe-NT-XcX">
                                     <rect key="frame" x="16" y="-8" width="382" height="16"/>
                                     <color key="backgroundColor" name="ContainerColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="16" id="MEj-qD-VKo"/>
+                                    </constraints>
                                 </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTw-B9-7dj">
+                                    <rect key="frame" x="142" y="34" width="131" height="34"/>
+                                    <state key="normal" title="Add to Favorites"/>
+                                    <connections>
+                                        <action selector="toggleFavorite:" destination="v3p-SJ-7hR" eventType="touchUpInside" id="X8U-Gf-Nxp"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" name="BackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="MSe-NT-XcX" secondAttribute="trailing" constant="16" id="CUl-A9-PbB"/>
+                                <constraint firstItem="VTw-B9-7dj" firstAttribute="centerX" secondItem="hmd-dW-MMF" secondAttribute="centerX" id="I1J-lZ-flx"/>
                                 <constraint firstItem="MSe-NT-XcX" firstAttribute="top" secondItem="hmd-dW-MMF" secondAttribute="top" constant="-8" id="RJ7-Fa-418"/>
                                 <constraint firstItem="MSe-NT-XcX" firstAttribute="leading" secondItem="hmd-dW-MMF" secondAttribute="leading" constant="16" id="ZDZ-78-XN5"/>
-                                <constraint firstAttribute="bottom" secondItem="MSe-NT-XcX" secondAttribute="bottom" constant="16" id="qWT-2n-BTP"/>
+                                <constraint firstItem="VTw-B9-7dj" firstAttribute="top" secondItem="MSe-NT-XcX" secondAttribute="bottom" constant="26" id="wt0-Ck-BSu"/>
                             </constraints>
                         </view>
                         <sections/>
@@ -135,6 +146,7 @@
                     <connections>
                         <outlet property="characterImageView" destination="Xoi-nO-smW" id="bbP-7G-Omg"/>
                         <outlet property="characterNameLabel" destination="IDw-ge-lA4" id="cFV-sK-ikC"/>
+                        <outlet property="favoriteButton" destination="VTw-B9-7dj" id="1NE-a1-2BZ"/>
                         <outlet property="footerContainerView" destination="MSe-NT-XcX" id="BOi-Se-cNV"/>
                         <outlet property="headerContainerView" destination="7gE-bH-rHV" id="qdc-wb-GsT"/>
                         <segue destination="g2N-h5-cvn" kind="show" identifier="showLocationDetail" id="N02-IG-vo7"/>
@@ -310,6 +322,7 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="N02-IG-vo7"/>
         <segue reference="Uz1-hl-4q6"/>
     </inferredMetricsTieBreakers>
 </document>
