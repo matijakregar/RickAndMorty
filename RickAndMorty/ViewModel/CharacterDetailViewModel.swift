@@ -20,10 +20,10 @@ class CharacterDetailViewModel {
 		var items: [PropertyListDisplayable] = []
 		items.append(BasicPropertyListItem(name: "Species", value: character.species))
 		if let origin = character.origin {
-			items.append(LocationItem(name: "Origin", value: origin))
+			items.append(LocationItem(name: "Origin", location: origin))
 		}
 		if let location = character.location {
-			items.append(LocationItem(name: "Location", value: location))
+			items.append(LocationItem(name: "Location", location: location))
 		}
 		return items
 	}

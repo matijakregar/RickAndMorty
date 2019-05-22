@@ -11,6 +11,10 @@ import Foundation
 struct LocationItem: PropertyListDisplayable {
 	
 	let name: String
-	let value: CustomStringConvertible
+	let location: Location
+	
+	var value: CustomStringConvertible {
+		return location
+	}
 	
 }
