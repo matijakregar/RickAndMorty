@@ -11,6 +11,7 @@ import Foundation
 protocol CharacterListDisplayable {
 	
 	var name: String { get }
+	var species: String { get }
 	var imageURL: URL { get }
 	
 }

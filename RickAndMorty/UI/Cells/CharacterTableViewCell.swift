@@ -13,6 +13,7 @@ class CharacterTableViewCell: UITableViewCell, NibBackedTableViewCell {
 	@IBOutlet private var containerView: UIView!
 	@IBOutlet private var characterImageView: UIImageView!
 	@IBOutlet private var nameLabel: UILabel!
+	@IBOutlet private var speciesLabel: UILabel!
 	@IBOutlet private var loadingIndicator: UIActivityIndicatorView!
 	
 	private var imageDataTask: URLSessionDataTask?
@@ -30,6 +31,8 @@ class CharacterTableViewCell: UITableViewCell, NibBackedTableViewCell {
 		// Cancel the previous image from getting loaded and presenting any unwanted results.
 		imageDataTask?.cancel()
 		nameLabel.text = ""
+		speciesLabel.text = ""
+		setHighlighted(false, animated: false)
 	}
 	
 	override func setHighlighted(_ highlighted: Bool, animated: Bool) {
@@ -43,6 +46,7 @@ class CharacterTableViewCell: UITableViewCell, NibBackedTableViewCell {
 	func configure(with character: CharacterListDisplayable?) {
 		if let character = character {
 			nameLabel.text = character.name
+			speciesLabel.text = character.species
 			
 			// TODO: check if this can be solved nicely
 			// An ugly hack to prevent blinking images
