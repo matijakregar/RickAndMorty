@@ -37,6 +37,10 @@
 		D4109DD7229551D100597A49 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DD6229551D100597A49 /* Theme.swift */; };
 		D4109DD92295621600597A49 /* UIRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DD82295621600597A49 /* UIRefreshControl.swift */; };
 		D4109DDB2295643100597A49 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DDA2295643100597A49 /* UIColor.swift */; };
+		D4109DE22295703300597A49 /* CharacterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DE12295703300597A49 /* CharacterDetailViewModel.swift */; };
+		D4109DE82295720200597A49 /* PropertyListDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DE72295720200597A49 /* PropertyListDisplayable.swift */; };
+		D4109DEA229572E100597A49 /* BasicPropertyListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DE9229572E100597A49 /* BasicPropertyListItem.swift */; };
+		D4109DEC2295734700597A49 /* LocationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DEB2295734700597A49 /* LocationItem.swift */; };
 		D4580FB22292A16200D0E8F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4580FB12292A16200D0E8F7 /* AppDelegate.swift */; };
 		D4580FB42292A16200D0E8F7 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4580FB32292A16200D0E8F7 /* FirstViewController.swift */; };
 		D4580FB62292A16200D0E8F7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4580FB52292A16200D0E8F7 /* SecondViewController.swift */; };
@@ -95,6 +99,10 @@
 		D4109DD6229551D100597A49 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		D4109DD82295621600597A49 /* UIRefreshControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRefreshControl.swift; sourceTree = "<group>"; };
 		D4109DDA2295643100597A49 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		D4109DE12295703300597A49 /* CharacterDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewModel.swift; sourceTree = "<group>"; };
+		D4109DE72295720200597A49 /* PropertyListDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListDisplayable.swift; sourceTree = "<group>"; };
+		D4109DE9229572E100597A49 /* BasicPropertyListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicPropertyListItem.swift; sourceTree = "<group>"; };
+		D4109DEB2295734700597A49 /* LocationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationItem.swift; sourceTree = "<group>"; };
 		D4580FAE2292A16200D0E8F7 /* RickAndMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4580FB12292A16200D0E8F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4580FB32292A16200D0E8F7 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +183,9 @@
 			children = (
 				D4109DB122941F5600597A49 /* Protocols */,
 				D4109DB6229421FD00597A49 /* PagedCharactersViewModel.swift */,
+				D4109DE12295703300597A49 /* CharacterDetailViewModel.swift */,
+				D4109DE9229572E100597A49 /* BasicPropertyListItem.swift */,
+				D4109DEB2295734700597A49 /* LocationItem.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -234,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				D4109DC92295306900597A49 /* CharacterListDisplayable.swift */,
+				D4109DE72295720200597A49 /* PropertyListDisplayable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -439,6 +451,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4580FB62292A16200D0E8F7 /* SecondViewController.swift in Sources */,
+				D4109DE22295703300597A49 /* CharacterDetailViewModel.swift in Sources */,
 				D4109DD0229534E300597A49 /* TimeInterval.swift in Sources */,
 				D4580FB22292A16200D0E8F7 /* AppDelegate.swift in Sources */,
 				D4109DA02293F0A500597A49 /* HTTPMethod.swift in Sources */,
@@ -455,6 +468,7 @@
 				D4109DAB2293F43E00597A49 /* HeaderEncoder.swift in Sources */,
 				D4109DD7229551D100597A49 /* Theme.swift in Sources */,
 				D4109DBB2294267D00597A49 /* CharactersViewController.swift in Sources */,
+				D4109DE82295720200597A49 /* PropertyListDisplayable.swift in Sources */,
 				D4109DAF2293F47000597A49 /* URLParameterEncoder.swift in Sources */,
 				D487F7B822934F640019D9B3 /* ListResponse.swift in Sources */,
 				D4109DCC229531BF00597A49 /* UIImageView.swift in Sources */,
@@ -462,6 +476,7 @@
 				D4580FDB2292C24800D0E8F7 /* Queryable.swift in Sources */,
 				D4109D932293D37000597A49 /* ObjectResponse.swift in Sources */,
 				D4109DA82293F41600597A49 /* ParameterEncoder.swift in Sources */,
+				D4109DEC2295734700597A49 /* LocationItem.swift in Sources */,
 				D4109D9A2293EEDD00597A49 /* Constants.swift in Sources */,
 				D4580FD62292B51500D0E8F7 /* Character.swift in Sources */,
 				D4109DC32295297C00597A49 /* NSObject.swift in Sources */,
@@ -471,6 +486,7 @@
 				D4109DCA2295306900597A49 /* CharacterListDisplayable.swift in Sources */,
 				D4109DA62293F22E00597A49 /* QueryEndpoint.swift in Sources */,
 				D4109DB7229421FD00597A49 /* PagedCharactersViewModel.swift in Sources */,
+				D4109DEA229572E100597A49 /* BasicPropertyListItem.swift in Sources */,
 				D487F7B422933FE60019D9B3 /* Info.swift in Sources */,
 				D4109DD92295621600597A49 /* UIRefreshControl.swift in Sources */,
 			);

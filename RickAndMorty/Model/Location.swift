@@ -63,3 +63,11 @@ extension Location: Queryable {
 	}
 	
 }
+
+extension Location: CustomStringConvertible {
+	
+	var description: String {
+		return name
+	}
+	
+}
