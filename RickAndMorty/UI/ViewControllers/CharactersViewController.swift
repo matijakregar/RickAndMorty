@@ -22,13 +22,17 @@ class CharactersViewController: UITableViewController {
 		// Register cell classes
 		CharacterTableViewCell.register(for: tableView)
 		
-		viewModel.reloadData()
+		refreshContent()
 	}
 	
 	private func visibleIndexPaths(intersectingWith indexPaths: [IndexPath]) -> [IndexPath] {
 		let indexPathsForVisibleRows = tableView.indexPathsForVisibleRows ?? []
 		let indexPathsIntersection = Set(indexPathsForVisibleRows).intersection(indexPaths)
 		return Array(indexPathsIntersection)
+	}
+	
+	@IBAction func refreshContent(_ sender: Any? = nil) {
+		viewModel.reloadData()
 	}
 	
 }
@@ -91,6 +95,8 @@ extension CharactersViewController: CharactersViewModelDelegate {
 	
 	func viewModel(_ viewModel: CharactersViewModel, didLoadDataFor indexPaths: [IndexPath]?) {
 		DispatchQueue.main.async {
+			self.refreshControl?.endRefreshingIfNeeded()
+			
 			guard let indexPaths = indexPaths
 				else {
 					self.tableView.reloadData()
@@ -104,6 +110,7 @@ extension CharactersViewController: CharactersViewModelDelegate {
 	
 	func viewModel(_ viewModel: CharactersViewModel, didFailLoadingWith error: Error) {
 		DispatchQueue.main.async {
+			self.refreshControl?.endRefreshingIfNeeded()
 			// TODO: Implement error message
 			print("Characters loading error: \(error)")
 		}
