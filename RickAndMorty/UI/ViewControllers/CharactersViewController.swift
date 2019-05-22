@@ -10,19 +10,24 @@ import UIKit
 
 class CharactersViewController: UITableViewController {
 	
-	lazy var viewModel: PagedCharactersViewModel = {
-		let viewModel = PagedCharactersViewModel()
-		viewModel.delegate = self
-		return viewModel
-	}()
+	// Default view model contains all available characters.
+	var viewModel: CharactersViewModel = PagedCharactersViewModel()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		// Register cell classes
+		viewModel.delegate = self
+		
+		// Register cell classes.
 		CharacterTableViewCell.register(for: tableView)
 		
-		refreshContent()
+		// Disable pull to refresh if viewModel can't reload data.
+		if viewModel is DataReloadable {
+			refreshContent()
+		}
+		else {
+			refreshControl = nil
+		}
 	}
 	
 	private func visibleIndexPaths(intersectingWith indexPaths: [IndexPath]) -> [IndexPath] {
@@ -32,7 +37,11 @@ class CharactersViewController: UITableViewController {
 	}
 	
 	@IBAction func refreshContent(_ sender: Any? = nil) {
-		viewModel.reloadData()
+		guard let reloadableViewModel = viewModel as? DataReloadable
+			else {
+				return
+		}
+		reloadableViewModel.reloadData()
 	}
 	
 	// MARK: - Navigation
@@ -94,13 +103,18 @@ extension CharactersViewController {
 extension CharactersViewController: UITableViewDataSourcePrefetching {
 	
 	func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+		guard let pagedViewModel = viewModel as? PagedViewModel
+			else {
+				return
+		}
+		
 		guard let firstRow = indexPaths.first?.row,
 			let lastRow = indexPaths.last?.row
 			else {
 				return
 		}
 		if lastRow > viewModel.characters.count || firstRow > viewModel.characters.count {
-			viewModel.loadNextPageIfPossible()
+			pagedViewModel.loadNextPageIfPossible()
 		}
 	}
 	

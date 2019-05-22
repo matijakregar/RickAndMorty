@@ -12,6 +12,7 @@ struct Segue {
 	
 	static let showCharacterDetail = "showCharacterDetail"
 	static let showLocationDetail = "showLocationDetail"
+	static let showCharactereList = "showCharactereList"
 	
 }
 

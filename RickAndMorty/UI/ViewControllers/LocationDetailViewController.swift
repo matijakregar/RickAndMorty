@@ -23,7 +23,7 @@ class LocationDetailViewController: UITableViewController {
 		
 		headerContainerView.layer.cornerRadius = Theme.View.cornerRadius
 		footerContainerView.layer.cornerRadius = Theme.View.cornerRadius
-				
+		
 		guard let location = viewModel?.location
 			else {
 				return
@@ -57,15 +57,22 @@ class LocationDetailViewController: UITableViewController {
 		return true
 	}
 	
-	/*
 	// MARK: - Navigation
-	
-	// In a storyboard-based application, you will often want to do a little preparation before navigation
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-	// Get the new view controller using segue.destination.
-	// Pass the selected object to the new view controller.
+		switch segue.identifier {
+		case Segue.showCharactereList:
+			guard let selectedRow = tableView.indexPathForSelectedRow?.row,
+				let charactersViewController = segue.destination as? CharactersViewController,
+				let charactersItem = viewModel?.propertyListItems[selectedRow] as? CharactersItem
+				else {
+					return
+			}
+			let charactersViewModel = StaticCharactersViewModel(characters: charactersItem.characters)
+			charactersViewController.viewModel = charactersViewModel
+		default:
+			break
+		}
 	}
-	*/
 	
 }
 
@@ -105,6 +112,7 @@ extension LocationDetailViewController {
 				tableView.deselectRow(at: indexPath, animated: false)
 				return
 		}
+		performSegue(withIdentifier: Segue.showCharactereList, sender: nil)
 	}
 	
 	override func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {

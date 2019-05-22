@@ -8,7 +8,7 @@
 
 import Foundation
 
-class PagedCharactersViewModel: CharactersViewModel {
+class PagedCharactersViewModel: CharactersViewModel, PagedViewModel, DataReloadable {
 	
 	private(set) var characters = [Character]()
 	private(set) var totalCharactersCount = 0

@@ -61,7 +61,6 @@ class CharacterDetailViewController: UITableViewController {
 		return true
 	}
 	
-	
 	// MARK: - Navigation
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		switch segue.identifier {
@@ -78,7 +77,6 @@ class CharacterDetailViewController: UITableViewController {
 			break
 		}
 	}
-	
 	
 }
 
