@@ -17,4 +17,8 @@ struct CharactersItem: PropertyListDisplayable {
 		return NSLocalizedString("View all", comment: "")
 	}
 	
+	var isSelectable: Bool {
+		return characters.count > 0
+	}
+	
 }

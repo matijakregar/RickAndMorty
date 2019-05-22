@@ -49,12 +49,11 @@ class LocationDetailViewController: UITableViewController {
 	}
 	
 	private func isSelectable(row: Int) -> Bool {
-		guard let charactersItem = viewModel?.propertyListItems[row] as? CharactersItem,
-			charactersItem.characters.count > 0
+		guard let listItem = viewModel?.propertyListItems[row]
 			else {
 				return false
 		}
-		return true
+		return listItem.isSelectable
 	}
 	
 	// MARK: - Navigation

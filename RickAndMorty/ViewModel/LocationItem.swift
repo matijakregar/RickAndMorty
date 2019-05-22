@@ -17,4 +17,8 @@ struct LocationItem: PropertyListDisplayable {
 		return location
 	}
 	
+	var isSelectable: Bool {
+		return location.id != .none
+	}
+	
 }

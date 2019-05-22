@@ -53,12 +53,12 @@ class CharacterDetailViewController: UITableViewController {
 	}
 	
 	private func isSelectable(row: Int) -> Bool {
-		guard let locationItem = viewModel?.propertyListItems[row] as? LocationItem,
-			locationItem.location.id != .none
+		guard let listItem = viewModel?.propertyListItems[row]
 			else {
 				return false
 		}
-		return true
+		return listItem.isSelectable
+	}
 	}
 	
 	// MARK: - Navigation
