@@ -22,6 +22,7 @@
 		D4109DAB2293F43E00597A49 /* HeaderEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DAA2293F43E00597A49 /* HeaderEncoder.swift */; };
 		D4109DAD2293F45800597A49 /* PostParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DAC2293F45800597A49 /* PostParameterEncoder.swift */; };
 		D4109DAF2293F47000597A49 /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DAE2293F47000597A49 /* URLParameterEncoder.swift */; };
+		D4109DD7229551D100597A49 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DD6229551D100597A49 /* Theme.swift */; };
 		D4580FB22292A16200D0E8F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4580FB12292A16200D0E8F7 /* AppDelegate.swift */; };
 		D4580FB42292A16200D0E8F7 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4580FB32292A16200D0E8F7 /* FirstViewController.swift */; };
 		D4580FB62292A16200D0E8F7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4580FB52292A16200D0E8F7 /* SecondViewController.swift */; };
@@ -65,6 +66,7 @@
 		D4109DAA2293F43E00597A49 /* HeaderEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderEncoder.swift; sourceTree = "<group>"; };
 		D4109DAC2293F45800597A49 /* PostParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostParameterEncoder.swift; sourceTree = "<group>"; };
 		D4109DAE2293F47000597A49 /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
+		D4109DD6229551D100597A49 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		D4580FAE2292A16200D0E8F7 /* RickAndMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4580FB12292A16200D0E8F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4580FB32292A16200D0E8F7 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +142,22 @@
 			path = Encoders;
 			sourceTree = "<group>";
 		};
+		D4109DB82294260300597A49 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D4109DD5229551C300597A49 /* Theme */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		D4109DD5229551C300597A49 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				D4109DD6229551D100597A49 /* Theme.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
 		D4580FA52292A16200D0E8F7 = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +182,7 @@
 				D4109D992293EEDD00597A49 /* Constants.swift */,
 				D4580FD42292A4ED00D0E8F7 /* Networking */,
 				D4580FD32292A4DD00D0E8F7 /* Model */,
+				D4109DB82294260300597A49 /* UI */,
 				D4580FB12292A16200D0E8F7 /* AppDelegate.swift */,
 				D4580FB32292A16200D0E8F7 /* FirstViewController.swift */,
 				D4580FB52292A16200D0E8F7 /* SecondViewController.swift */,
@@ -339,6 +358,7 @@
 				D4109DAD2293F45800597A49 /* PostParameterEncoder.swift in Sources */,
 				D4109D9E2293EFD100597A49 /* NetworkingError.swift in Sources */,
 				D4109DAB2293F43E00597A49 /* HeaderEncoder.swift in Sources */,
+				D4109DD7229551D100597A49 /* Theme.swift in Sources */,
 				D4109DAF2293F47000597A49 /* URLParameterEncoder.swift in Sources */,
 				D487F7B822934F640019D9B3 /* ListResponse.swift in Sources */,
 				D4580FDB2292C24800D0E8F7 /* Queryable.swift in Sources */,
