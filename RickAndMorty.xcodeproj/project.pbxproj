@@ -25,6 +25,10 @@
 		D4109DB322941F8700597A49 /* CharactersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DB222941F8700597A49 /* CharactersViewModel.swift */; };
 		D4109DB52294209A00597A49 /* CharactersViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DB42294209A00597A49 /* CharactersViewModelDelegate.swift */; };
 		D4109DB7229421FD00597A49 /* PagedCharactersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DB6229421FD00597A49 /* PagedCharactersViewModel.swift */; };
+		D4109DC32295297C00597A49 /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DC22295297C00597A49 /* NSObject.swift */; };
+		D4109DCC229531BF00597A49 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DCB229531BF00597A49 /* UIImageView.swift */; };
+		D4109DCE229534C400597A49 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DCD229534C400597A49 /* UIView.swift */; };
+		D4109DD0229534E300597A49 /* TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DCF229534E300597A49 /* TimeInterval.swift */; };
 		D4109DD7229551D100597A49 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DD6229551D100597A49 /* Theme.swift */; };
 		D4580FB22292A16200D0E8F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4580FB12292A16200D0E8F7 /* AppDelegate.swift */; };
 		D4580FB42292A16200D0E8F7 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4580FB32292A16200D0E8F7 /* FirstViewController.swift */; };
@@ -72,6 +76,10 @@
 		D4109DB222941F8700597A49 /* CharactersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewModel.swift; sourceTree = "<group>"; };
 		D4109DB42294209A00597A49 /* CharactersViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewModelDelegate.swift; sourceTree = "<group>"; };
 		D4109DB6229421FD00597A49 /* PagedCharactersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagedCharactersViewModel.swift; sourceTree = "<group>"; };
+		D4109DC22295297C00597A49 /* NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
+		D4109DCB229531BF00597A49 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		D4109DCD229534C400597A49 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		D4109DCF229534E300597A49 /* TimeInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInterval.swift; sourceTree = "<group>"; };
 		D4109DD6229551D100597A49 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		D4580FAE2292A16200D0E8F7 /* RickAndMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4580FB12292A16200D0E8F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -174,6 +182,17 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		D4109DC12295296200597A49 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D4109DC22295297C00597A49 /* NSObject.swift */,
+				D4109DCB229531BF00597A49 /* UIImageView.swift */,
+				D4109DCD229534C400597A49 /* UIView.swift */,
+				D4109DCF229534E300597A49 /* TimeInterval.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		D4109DD5229551C300597A49 /* Theme */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +227,7 @@
 				D4580FD32292A4DD00D0E8F7 /* Model */,
 				D4109DB022941F4300597A49 /* ViewModel */,
 				D4109DB82294260300597A49 /* UI */,
+				D4109DC12295296200597A49 /* Extensions */,
 				D4580FB12292A16200D0E8F7 /* AppDelegate.swift */,
 				D4580FB32292A16200D0E8F7 /* FirstViewController.swift */,
 				D4580FB52292A16200D0E8F7 /* SecondViewController.swift */,
@@ -373,6 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4580FB62292A16200D0E8F7 /* SecondViewController.swift in Sources */,
+				D4109DD0229534E300597A49 /* TimeInterval.swift in Sources */,
 				D4580FB22292A16200D0E8F7 /* AppDelegate.swift in Sources */,
 				D4109DA02293F0A500597A49 /* HTTPMethod.swift in Sources */,
 				D4109DA22293F0DA00597A49 /* DecodingManager.swift in Sources */,
@@ -388,11 +409,15 @@
 				D4109DD7229551D100597A49 /* Theme.swift in Sources */,
 				D4109DAF2293F47000597A49 /* URLParameterEncoder.swift in Sources */,
 				D487F7B822934F640019D9B3 /* ListResponse.swift in Sources */,
+				D4109DCC229531BF00597A49 /* UIImageView.swift in Sources */,
+				D4109DCE229534C400597A49 /* UIView.swift in Sources */,
 				D4580FDB2292C24800D0E8F7 /* Queryable.swift in Sources */,
 				D4109D932293D37000597A49 /* ObjectResponse.swift in Sources */,
 				D4109DA82293F41600597A49 /* ParameterEncoder.swift in Sources */,
 				D4109D9A2293EEDD00597A49 /* Constants.swift in Sources */,
 				D4580FD62292B51500D0E8F7 /* Character.swift in Sources */,
+				D4109DC32295297C00597A49 /* NSObject.swift in Sources */,
+				D4109DC02295294600597A49 /* NibBackedCell.swift in Sources */,
 				D4109D9C2293EFA200597A49 /* Endpoint.swift in Sources */,
 				D4109DA62293F22E00597A49 /* QueryEndpoint.swift in Sources */,
 				D4109DB7229421FD00597A49 /* PagedCharactersViewModel.swift in Sources */,

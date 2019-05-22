@@ -13,6 +13,7 @@ enum NetworkingError: Error {
 	case emptyResponse
 	case missingBaseURL
 	case noHttpResponse
+	case corruptData
 	case httpError(statusCode: Int, request: URLRequest)
 	
 	var description: String {
@@ -26,6 +27,8 @@ enum NetworkingError: Error {
 			return "No base URL set"
 		case .noHttpResponse:
 			return "Can't resolve HTTPURLResponse"
+		case .corruptData:
+			return "Loaded data is corrupt"
 		}
 	}
 	
