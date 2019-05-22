@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Character: Decodable {
+struct Character: Codable {
 	
 	// MARK: - Properties
 	
@@ -71,5 +71,38 @@ extension Character: Queryable {
 // MARK: - CharacterListDisplayable
 
 extension Character: CharacterListDisplayable {
+	
+}
+
+
+// MARK: - Equatable & Hashable
+
+extension Character: Equatable {
+	
+	static func == (lhs: Character, rhs: Character) -> Bool {
+		return lhs.id == rhs.id
+	}
+
+}
+
+extension Character: Hashable {
+	
+	func hash(into hasher: inout Hasher) {
+		hasher.combine(id)
+	}
+	
+}
+
+// MARK: - Favorites
+
+extension Character {
+	
+	var isFavorite: Bool {
+		guard let favorites = FavoritesManager.favoriteCharacters
+			else {
+				return false
+		}
+		return favorites.contains(self)
+	}
 	
 }

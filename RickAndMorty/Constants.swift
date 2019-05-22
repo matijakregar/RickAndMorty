@@ -27,4 +27,12 @@ struct Constants {
 		
 	}
 	
+	struct UserDefaults {
+		
+		struct Key {
+			static let favoriteCharacters = "favoriteCharacters"
+		}
+		
+	}
+	
 }
