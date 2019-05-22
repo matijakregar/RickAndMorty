@@ -36,6 +36,7 @@
 		D4109DD422953E6200597A49 /* CharacterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4109DD222953E6200597A49 /* CharacterTableViewCell.xib */; };
 		D4109DD7229551D100597A49 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DD6229551D100597A49 /* Theme.swift */; };
 		D4109DD92295621600597A49 /* UIRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DD82295621600597A49 /* UIRefreshControl.swift */; };
+		D4109DDB2295643100597A49 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DDA2295643100597A49 /* UIColor.swift */; };
 		D4580FB22292A16200D0E8F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4580FB12292A16200D0E8F7 /* AppDelegate.swift */; };
 		D4580FB42292A16200D0E8F7 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4580FB32292A16200D0E8F7 /* FirstViewController.swift */; };
 		D4580FB62292A16200D0E8F7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4580FB52292A16200D0E8F7 /* SecondViewController.swift */; };
@@ -93,6 +94,7 @@
 		D4109DD222953E6200597A49 /* CharacterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterTableViewCell.xib; sourceTree = "<group>"; };
 		D4109DD6229551D100597A49 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		D4109DD82295621600597A49 /* UIRefreshControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRefreshControl.swift; sourceTree = "<group>"; };
+		D4109DDA2295643100597A49 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		D4580FAE2292A16200D0E8F7 /* RickAndMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4580FB12292A16200D0E8F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4580FB32292A16200D0E8F7 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 				D4109DCD229534C400597A49 /* UIView.swift */,
 				D4109DCF229534E300597A49 /* TimeInterval.swift */,
 				D4109DD82295621600597A49 /* UIRefreshControl.swift */,
+				D4109DDA2295643100597A49 /* UIColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 				D4109DC32295297C00597A49 /* NSObject.swift in Sources */,
 				D4109DC02295294600597A49 /* NibBackedCell.swift in Sources */,
 				D4109D9C2293EFA200597A49 /* Endpoint.swift in Sources */,
+				D4109DDB2295643100597A49 /* UIColor.swift in Sources */,
 				D4109DCA2295306900597A49 /* CharacterListDisplayable.swift in Sources */,
 				D4109DA62293F22E00597A49 /* QueryEndpoint.swift in Sources */,
 				D4109DB7229421FD00597A49 /* PagedCharactersViewModel.swift in Sources */,

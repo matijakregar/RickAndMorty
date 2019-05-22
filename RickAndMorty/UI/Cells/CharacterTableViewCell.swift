@@ -32,10 +32,12 @@ class CharacterTableViewCell: UITableViewCell, NibBackedTableViewCell {
 		nameLabel.text = ""
 	}
 	
-	override func setSelected(_ selected: Bool, animated: Bool) {
-		super.setSelected(selected, animated: animated)
-		
-		// Configure the view for the selected state
+	override func setHighlighted(_ highlighted: Bool, animated: Bool) {
+		containerView.backgroundColor = highlighted ? Theme.Colors.highlightedContainer : Theme.Colors.container
+	}
+	
+	override func setSelected(_ selected: Bool, animated: Bool) {		
+		setHighlighted(selected, animated: animated)
 	}
 	
 	func configure(with character: CharacterListDisplayable?) {

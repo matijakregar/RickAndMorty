@@ -18,6 +18,7 @@ struct Theme {
 	struct Colors {
 		static let background: UIColor = UIColor(named: "BackgroundColor")!
 		static let container: UIColor = UIColor(named: "ContainerColor")!
+		static let highlightedContainer: UIColor = container.lightened
 		static let overlay: UIColor = UIColor(named: "OverlayColor")!
 		
 		static let accent: UIColor = UIColor(named: "AccentColor")!
