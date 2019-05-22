@@ -37,7 +37,11 @@
 		D4109DD7229551D100597A49 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DD6229551D100597A49 /* Theme.swift */; };
 		D4109DD92295621600597A49 /* UIRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DD82295621600597A49 /* UIRefreshControl.swift */; };
 		D4109DDB2295643100597A49 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DDA2295643100597A49 /* UIColor.swift */; };
+		D4109DDD229567D600597A49 /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DDC229567D600597A49 /* CharacterDetailViewController.swift */; };
+		D4109DE022956BFC00597A49 /* Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DDF22956BFC00597A49 /* Segue.swift */; };
 		D4109DE22295703300597A49 /* CharacterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DE12295703300597A49 /* CharacterDetailViewModel.swift */; };
+		D4109DE52295718E00597A49 /* PropertyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DE32295718E00597A49 /* PropertyTableViewCell.swift */; };
+		D4109DE62295718E00597A49 /* PropertyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4109DE42295718E00597A49 /* PropertyTableViewCell.xib */; };
 		D4109DE82295720200597A49 /* PropertyListDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DE72295720200597A49 /* PropertyListDisplayable.swift */; };
 		D4109DEA229572E100597A49 /* BasicPropertyListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DE9229572E100597A49 /* BasicPropertyListItem.swift */; };
 		D4109DEC2295734700597A49 /* LocationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DEB2295734700597A49 /* LocationItem.swift */; };
@@ -99,7 +103,11 @@
 		D4109DD6229551D100597A49 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		D4109DD82295621600597A49 /* UIRefreshControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRefreshControl.swift; sourceTree = "<group>"; };
 		D4109DDA2295643100597A49 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		D4109DDC229567D600597A49 /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
+		D4109DDF22956BFC00597A49 /* Segue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segue.swift; sourceTree = "<group>"; };
 		D4109DE12295703300597A49 /* CharacterDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewModel.swift; sourceTree = "<group>"; };
+		D4109DE32295718E00597A49 /* PropertyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyTableViewCell.swift; sourceTree = "<group>"; };
+		D4109DE42295718E00597A49 /* PropertyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PropertyTableViewCell.xib; sourceTree = "<group>"; };
 		D4109DE72295720200597A49 /* PropertyListDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListDisplayable.swift; sourceTree = "<group>"; };
 		D4109DE9229572E100597A49 /* BasicPropertyListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicPropertyListItem.swift; sourceTree = "<group>"; };
 		D4109DEB2295734700597A49 /* LocationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationItem.swift; sourceTree = "<group>"; };
@@ -205,6 +213,7 @@
 				D4109DD5229551C300597A49 /* Theme */,
 				D4109DC82295304F00597A49 /* Protocols */,
 				D4109DBC22942A0F00597A49 /* Cells */,
+				D4109DDE22956BE300597A49 /* Storyboards */,
 				D4109DB92294262E00597A49 /* ViewControllers */,
 			);
 			path = UI;
@@ -214,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				D4109DBA2294267D00597A49 /* CharactersViewController.swift */,
+				D4109DDC229567D600597A49 /* CharacterDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -224,6 +234,8 @@
 				D4109DBF2295294600597A49 /* NibBackedCell.swift */,
 				D4109DD122953E6200597A49 /* CharacterTableViewCell.swift */,
 				D4109DD222953E6200597A49 /* CharacterTableViewCell.xib */,
+				D4109DE32295718E00597A49 /* PropertyTableViewCell.swift */,
+				D4109DE42295718E00597A49 /* PropertyTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -256,6 +268,14 @@
 				D4109DD6229551D100597A49 /* Theme.swift */,
 			);
 			path = Theme;
+			sourceTree = "<group>";
+		};
+		D4109DDE22956BE300597A49 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D4109DDF22956BFC00597A49 /* Segue.swift */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		D4580FA52292A16200D0E8F7 = {
@@ -429,6 +449,7 @@
 				D4580FBE2292A16300D0E8F7 /* LaunchScreen.storyboard in Resources */,
 				D4109DD422953E6200597A49 /* CharacterTableViewCell.xib in Resources */,
 				D4580FBB2292A16300D0E8F7 /* Assets.xcassets in Resources */,
+				D4109DE62295718E00597A49 /* PropertyTableViewCell.xib in Resources */,
 				D4580FB92292A16200D0E8F7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,6 +473,7 @@
 			files = (
 				D4580FB62292A16200D0E8F7 /* SecondViewController.swift in Sources */,
 				D4109DE22295703300597A49 /* CharacterDetailViewModel.swift in Sources */,
+				D4109DE52295718E00597A49 /* PropertyTableViewCell.swift in Sources */,
 				D4109DD0229534E300597A49 /* TimeInterval.swift in Sources */,
 				D4580FB22292A16200D0E8F7 /* AppDelegate.swift in Sources */,
 				D4109DA02293F0A500597A49 /* HTTPMethod.swift in Sources */,
@@ -478,12 +500,14 @@
 				D4109DA82293F41600597A49 /* ParameterEncoder.swift in Sources */,
 				D4109DEC2295734700597A49 /* LocationItem.swift in Sources */,
 				D4109D9A2293EEDD00597A49 /* Constants.swift in Sources */,
+				D4109DDD229567D600597A49 /* CharacterDetailViewController.swift in Sources */,
 				D4580FD62292B51500D0E8F7 /* Character.swift in Sources */,
 				D4109DC32295297C00597A49 /* NSObject.swift in Sources */,
 				D4109DC02295294600597A49 /* NibBackedCell.swift in Sources */,
 				D4109D9C2293EFA200597A49 /* Endpoint.swift in Sources */,
 				D4109DDB2295643100597A49 /* UIColor.swift in Sources */,
 				D4109DCA2295306900597A49 /* CharacterListDisplayable.swift in Sources */,
+				D4109DE022956BFC00597A49 /* Segue.swift in Sources */,
 				D4109DA62293F22E00597A49 /* QueryEndpoint.swift in Sources */,
 				D4109DB7229421FD00597A49 /* PagedCharactersViewModel.swift in Sources */,
 				D4109DEA229572E100597A49 /* BasicPropertyListItem.swift in Sources */,

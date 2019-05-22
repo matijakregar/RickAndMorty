@@ -35,6 +35,24 @@ class CharactersViewController: UITableViewController {
 		viewModel.reloadData()
 	}
 	
+	// MARK: - Navigation
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		switch segue.identifier {
+		case Segue.showCharacterDetail:
+			guard let selectedRow = tableView.indexPathForSelectedRow?.row,
+				let characterDetailViewController = segue.destination as? CharacterDetailViewController
+				else {
+					return
+			}
+			let characterDetailViewModel = CharacterDetailViewModel(character: viewModel.characters[selectedRow])
+			characterDetailViewController.viewModel = characterDetailViewModel
+		default:
+			break
+		}
+		
+		
+	}
+	
 }
 
 // MARK: - UITableViewDataSource
@@ -69,7 +87,7 @@ extension CharactersViewController {
 extension CharactersViewController {
 	
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		
+		performSegue(withIdentifier: Segue.showCharacterDetail, sender: nil)
 	}
 	
 }
