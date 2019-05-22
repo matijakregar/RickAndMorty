@@ -113,12 +113,12 @@ extension NetworkingManager {
 	
 	@discardableResult
 	static func listRequest<T: Queryable & Decodable>(page: Int, completion: @escaping (ListResult<T>) -> Void) -> URLSessionDataTask? {
-		return self.request(QueryEndpoint(query: Query<Character>.list(page: page)), completion: completion)
+		return self.request(QueryEndpoint(query: Query<T>.list(page: page)), completion: completion)
 	}
 	
 	@discardableResult
 	static func objectRequest<T: Queryable & Decodable>(id: String, completion: @escaping (ObjectResult<T>) -> Void) -> URLSessionDataTask? {
-		return self.request(QueryEndpoint(query: Query<Character>.object(id: id)), completion: completion)
+		return self.request(QueryEndpoint(query: Query<T>.object(id: id)), completion: completion)
 	}
 	
 }

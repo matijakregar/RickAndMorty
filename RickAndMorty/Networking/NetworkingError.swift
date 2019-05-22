@@ -12,6 +12,7 @@ enum NetworkingError: Error {
 	
 	case emptyResponse
 	case missingBaseURL
+	case missingParameters
 	case noHttpResponse
 	case corruptData
 	case httpError(statusCode: Int, request: URLRequest)
@@ -25,6 +26,8 @@ enum NetworkingError: Error {
 			return "Empty response"
 		case .missingBaseURL:
 			return "No base URL set"
+		case .missingParameters:
+			return "Input parameters for the request missing"
 		case .noHttpResponse:
 			return "Can't resolve HTTPURLResponse"
 		case .corruptData:
