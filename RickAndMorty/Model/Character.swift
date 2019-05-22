@@ -64,3 +64,9 @@ extension Character: Queryable {
 	}
 	
 }
+
+// MARK: - CharacterListDisplayable
+
+extension Character: CharacterListDisplayable {
+	
+}

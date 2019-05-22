@@ -22,6 +22,20 @@
 		D4109DAB2293F43E00597A49 /* HeaderEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DAA2293F43E00597A49 /* HeaderEncoder.swift */; };
 		D4109DAD2293F45800597A49 /* PostParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DAC2293F45800597A49 /* PostParameterEncoder.swift */; };
 		D4109DAF2293F47000597A49 /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DAE2293F47000597A49 /* URLParameterEncoder.swift */; };
+		D4109DB322941F8700597A49 /* CharactersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DB222941F8700597A49 /* CharactersViewModel.swift */; };
+		D4109DB52294209A00597A49 /* CharactersViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DB42294209A00597A49 /* CharactersViewModelDelegate.swift */; };
+		D4109DB7229421FD00597A49 /* PagedCharactersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DB6229421FD00597A49 /* PagedCharactersViewModel.swift */; };
+		D4109DBB2294267D00597A49 /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DBA2294267D00597A49 /* CharactersViewController.swift */; };
+		D4109DC02295294600597A49 /* NibBackedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DBF2295294600597A49 /* NibBackedCell.swift */; };
+		D4109DC32295297C00597A49 /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DC22295297C00597A49 /* NSObject.swift */; };
+		D4109DCA2295306900597A49 /* CharacterListDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DC92295306900597A49 /* CharacterListDisplayable.swift */; };
+		D4109DCC229531BF00597A49 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DCB229531BF00597A49 /* UIImageView.swift */; };
+		D4109DCE229534C400597A49 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DCD229534C400597A49 /* UIView.swift */; };
+		D4109DD0229534E300597A49 /* TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DCF229534E300597A49 /* TimeInterval.swift */; };
+		D4109DD322953E6200597A49 /* CharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DD122953E6200597A49 /* CharacterTableViewCell.swift */; };
+		D4109DD422953E6200597A49 /* CharacterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4109DD222953E6200597A49 /* CharacterTableViewCell.xib */; };
+		D4109DD7229551D100597A49 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DD6229551D100597A49 /* Theme.swift */; };
+		D4109DD92295621600597A49 /* UIRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DD82295621600597A49 /* UIRefreshControl.swift */; };
 		D4580FB22292A16200D0E8F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4580FB12292A16200D0E8F7 /* AppDelegate.swift */; };
 		D4580FB42292A16200D0E8F7 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4580FB32292A16200D0E8F7 /* FirstViewController.swift */; };
 		D4580FB62292A16200D0E8F7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4580FB52292A16200D0E8F7 /* SecondViewController.swift */; };
@@ -65,6 +79,20 @@
 		D4109DAA2293F43E00597A49 /* HeaderEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderEncoder.swift; sourceTree = "<group>"; };
 		D4109DAC2293F45800597A49 /* PostParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostParameterEncoder.swift; sourceTree = "<group>"; };
 		D4109DAE2293F47000597A49 /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
+		D4109DB222941F8700597A49 /* CharactersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewModel.swift; sourceTree = "<group>"; };
+		D4109DB42294209A00597A49 /* CharactersViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewModelDelegate.swift; sourceTree = "<group>"; };
+		D4109DB6229421FD00597A49 /* PagedCharactersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagedCharactersViewModel.swift; sourceTree = "<group>"; };
+		D4109DBA2294267D00597A49 /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
+		D4109DBF2295294600597A49 /* NibBackedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibBackedCell.swift; sourceTree = "<group>"; };
+		D4109DC22295297C00597A49 /* NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
+		D4109DC92295306900597A49 /* CharacterListDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListDisplayable.swift; sourceTree = "<group>"; };
+		D4109DCB229531BF00597A49 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		D4109DCD229534C400597A49 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		D4109DCF229534E300597A49 /* TimeInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInterval.swift; sourceTree = "<group>"; };
+		D4109DD122953E6200597A49 /* CharacterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewCell.swift; sourceTree = "<group>"; };
+		D4109DD222953E6200597A49 /* CharacterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterTableViewCell.xib; sourceTree = "<group>"; };
+		D4109DD6229551D100597A49 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		D4109DD82295621600597A49 /* UIRefreshControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRefreshControl.swift; sourceTree = "<group>"; };
 		D4580FAE2292A16200D0E8F7 /* RickAndMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4580FB12292A16200D0E8F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4580FB32292A16200D0E8F7 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +168,81 @@
 			path = Encoders;
 			sourceTree = "<group>";
 		};
+		D4109DB022941F4300597A49 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D4109DB122941F5600597A49 /* Protocols */,
+				D4109DB6229421FD00597A49 /* PagedCharactersViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D4109DB122941F5600597A49 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D4109DB222941F8700597A49 /* CharactersViewModel.swift */,
+				D4109DB42294209A00597A49 /* CharactersViewModelDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D4109DB82294260300597A49 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D4109DD5229551C300597A49 /* Theme */,
+				D4109DC82295304F00597A49 /* Protocols */,
+				D4109DBC22942A0F00597A49 /* Cells */,
+				D4109DB92294262E00597A49 /* ViewControllers */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		D4109DB92294262E00597A49 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D4109DBA2294267D00597A49 /* CharactersViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D4109DBC22942A0F00597A49 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D4109DBF2295294600597A49 /* NibBackedCell.swift */,
+				D4109DD122953E6200597A49 /* CharacterTableViewCell.swift */,
+				D4109DD222953E6200597A49 /* CharacterTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		D4109DC12295296200597A49 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D4109DC22295297C00597A49 /* NSObject.swift */,
+				D4109DCB229531BF00597A49 /* UIImageView.swift */,
+				D4109DCD229534C400597A49 /* UIView.swift */,
+				D4109DCF229534E300597A49 /* TimeInterval.swift */,
+				D4109DD82295621600597A49 /* UIRefreshControl.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D4109DC82295304F00597A49 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D4109DC92295306900597A49 /* CharacterListDisplayable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D4109DD5229551C300597A49 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				D4109DD6229551D100597A49 /* Theme.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
 		D4580FA52292A16200D0E8F7 = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +267,9 @@
 				D4109D992293EEDD00597A49 /* Constants.swift */,
 				D4580FD42292A4ED00D0E8F7 /* Networking */,
 				D4580FD32292A4DD00D0E8F7 /* Model */,
+				D4109DB022941F4300597A49 /* ViewModel */,
+				D4109DB82294260300597A49 /* UI */,
+				D4109DC12295296200597A49 /* Extensions */,
 				D4580FB12292A16200D0E8F7 /* AppDelegate.swift */,
 				D4580FB32292A16200D0E8F7 /* FirstViewController.swift */,
 				D4580FB52292A16200D0E8F7 /* SecondViewController.swift */,
@@ -306,6 +412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4580FBE2292A16300D0E8F7 /* LaunchScreen.storyboard in Resources */,
+				D4109DD422953E6200597A49 /* CharacterTableViewCell.xib in Resources */,
 				D4580FBB2292A16300D0E8F7 /* Assets.xcassets in Resources */,
 				D4580FB92292A16200D0E8F7 /* Main.storyboard in Resources */,
 			);
@@ -329,26 +436,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4580FB62292A16200D0E8F7 /* SecondViewController.swift in Sources */,
+				D4109DD0229534E300597A49 /* TimeInterval.swift in Sources */,
 				D4580FB22292A16200D0E8F7 /* AppDelegate.swift in Sources */,
 				D4109DA02293F0A500597A49 /* HTTPMethod.swift in Sources */,
 				D4109DA22293F0DA00597A49 /* DecodingManager.swift in Sources */,
+				D4109DD322953E6200597A49 /* CharacterTableViewCell.swift in Sources */,
 				D4580FD82292B51E00D0E8F7 /* Location.swift in Sources */,
 				D4109DA42293F0FF00597A49 /* NetworkingManager.swift in Sources */,
+				D4109DB322941F8700597A49 /* CharactersViewModel.swift in Sources */,
 				D4580FB42292A16200D0E8F7 /* FirstViewController.swift in Sources */,
 				D487F7B62293430C0019D9B3 /* Query.swift in Sources */,
 				D4109DAD2293F45800597A49 /* PostParameterEncoder.swift in Sources */,
+				D4109DB52294209A00597A49 /* CharactersViewModelDelegate.swift in Sources */,
 				D4109D9E2293EFD100597A49 /* NetworkingError.swift in Sources */,
 				D4109DAB2293F43E00597A49 /* HeaderEncoder.swift in Sources */,
+				D4109DD7229551D100597A49 /* Theme.swift in Sources */,
+				D4109DBB2294267D00597A49 /* CharactersViewController.swift in Sources */,
 				D4109DAF2293F47000597A49 /* URLParameterEncoder.swift in Sources */,
 				D487F7B822934F640019D9B3 /* ListResponse.swift in Sources */,
+				D4109DCC229531BF00597A49 /* UIImageView.swift in Sources */,
+				D4109DCE229534C400597A49 /* UIView.swift in Sources */,
 				D4580FDB2292C24800D0E8F7 /* Queryable.swift in Sources */,
 				D4109D932293D37000597A49 /* ObjectResponse.swift in Sources */,
 				D4109DA82293F41600597A49 /* ParameterEncoder.swift in Sources */,
 				D4109D9A2293EEDD00597A49 /* Constants.swift in Sources */,
 				D4580FD62292B51500D0E8F7 /* Character.swift in Sources */,
+				D4109DC32295297C00597A49 /* NSObject.swift in Sources */,
+				D4109DC02295294600597A49 /* NibBackedCell.swift in Sources */,
 				D4109D9C2293EFA200597A49 /* Endpoint.swift in Sources */,
+				D4109DCA2295306900597A49 /* CharacterListDisplayable.swift in Sources */,
 				D4109DA62293F22E00597A49 /* QueryEndpoint.swift in Sources */,
+				D4109DB7229421FD00597A49 /* PagedCharactersViewModel.swift in Sources */,
 				D487F7B422933FE60019D9B3 /* Info.swift in Sources */,
+				D4109DD92295621600597A49 /* UIRefreshControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
