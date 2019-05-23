@@ -21,12 +21,7 @@ struct FavoritesManager {
 		
 		let noDuplicatesFavorites: [Character] = Array(Set(favorites))
 
-		guard let favoritesData = try? JSONEncoder().encode(noDuplicatesFavorites)
-			else {
-				return
-		}
-		userDefaults.setValue(favoritesData, forKey: Constants.UserDefaults.Key.favoriteCharacters)
-		userDefaults.synchronize()
+		saveFavorite(characters: noDuplicatesFavorites)
 	}
 	
 	static func removeFavorite(character :Character) {
@@ -37,12 +32,17 @@ struct FavoritesManager {
 		
 		let filteredFavorites = existingFavorites.filter({$0 != character})
 		
-		guard let favoritesData = try? JSONEncoder().encode(filteredFavorites)
+		saveFavorite(characters: filteredFavorites)
+	}
+	
+	private static func saveFavorite(characters: [Character]) {
+		guard let favoritesData = try? JSONEncoder().encode(characters)
 			else {
 				return
 		}
 		userDefaults.setValue(favoritesData, forKey: Constants.UserDefaults.Key.favoriteCharacters)
 		userDefaults.synchronize()
+		NotificationCenter.default.post(name: NSNotification.Name(Constants.Notification.favoritesChanged), object: nil)
 	}
 	
 	static var favoriteCharacters: [Character]? {

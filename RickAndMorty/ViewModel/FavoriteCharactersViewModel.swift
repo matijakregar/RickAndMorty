@@ -19,13 +19,18 @@ class FavoriteCharactersViewModel: CharactersViewModel, DataReloadable {
 	
 	weak var delegate: CharactersViewModelDelegate?
 	
-	func reloadData() {
+	init() {
+		NotificationCenter.default.addObserver(self, selector: #selector(reloadData), name: NSNotification.Name(Constants.Notification.favoritesChanged), object: nil)
+	}
+	
+	@objc func reloadData() {
 		guard let retrievedCharacters = FavoritesManager.favoriteCharacters
 			else {
 				characters = [Character]()
 				return
 		}
 		characters = retrievedCharacters
+		delegate?.viewModel(self, didLoadDataFor: .none)
 	}
 	
 }

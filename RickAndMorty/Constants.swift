@@ -35,4 +35,10 @@ struct Constants {
 		
 	}
 	
+	struct Notification {
+		
+		static let favoritesChanged = "Notification.favoritesChanged"
+		
+	}
+	
 }
