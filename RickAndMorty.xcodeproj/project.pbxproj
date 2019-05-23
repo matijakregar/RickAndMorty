@@ -54,6 +54,7 @@
 		D4109DFB22959E2F00597A49 /* FavoriteCharactersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DFA22959E2F00597A49 /* FavoriteCharactersViewModel.swift */; };
 		D4109DFE22959F6200597A49 /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DFD22959F6200597A49 /* FavoritesManager.swift */; };
 		D4109E002295A94C00597A49 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DFF2295A94C00597A49 /* UIButton.swift */; };
+		D4109E022295ADF500597A49 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109E012295ADF500597A49 /* MainTabBarController.swift */; };
 		D4580FB22292A16200D0E8F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4580FB12292A16200D0E8F7 /* AppDelegate.swift */; };
 		D4580FB92292A16200D0E8F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4580FB72292A16200D0E8F7 /* Main.storyboard */; };
 		D4580FBB2292A16300D0E8F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4580FBA2292A16300D0E8F7 /* Assets.xcassets */; };
@@ -127,6 +128,7 @@
 		D4109DFA22959E2F00597A49 /* FavoriteCharactersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCharactersViewModel.swift; sourceTree = "<group>"; };
 		D4109DFD22959F6200597A49 /* FavoritesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesManager.swift; sourceTree = "<group>"; };
 		D4109DFF2295A94C00597A49 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		D4109E012295ADF500597A49 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		D4580FAE2292A16200D0E8F7 /* RickAndMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4580FB12292A16200D0E8F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4580FB82292A16200D0E8F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 		D4109DB92294262E00597A49 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D4109E012295ADF500597A49 /* MainTabBarController.swift */,
 				D4109DBA2294267D00597A49 /* CharactersViewController.swift */,
 				D4109DDC229567D600597A49 /* CharacterDetailViewController.swift */,
 				D4109DED22958F7300597A49 /* LocationDetailViewController.swift */,
@@ -510,6 +513,7 @@
 			files = (
 				D4109DE22295703300597A49 /* CharacterDetailViewModel.swift in Sources */,
 				D4109DE52295718E00597A49 /* PropertyTableViewCell.swift in Sources */,
+				D4109E022295ADF500597A49 /* MainTabBarController.swift in Sources */,
 				D4109DD0229534E300597A49 /* TimeInterval.swift in Sources */,
 				D4580FB22292A16200D0E8F7 /* AppDelegate.swift in Sources */,
 				D4109DA02293F0A500597A49 /* HTTPMethod.swift in Sources */,
