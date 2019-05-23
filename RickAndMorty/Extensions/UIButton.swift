@@ -14,9 +14,15 @@ extension UIButton {
 		return [.normal, .selected, .highlighted, .disabled]
 	}
 	
-	@objc func setTitle(_ title: String?) {
+	func setTitle(_ title: String?) {
 		allStates.forEach {
 			setTitle(title, for: $0)
+		}
+	}
+	
+	func setTitleColor(_ color: UIColor?) {
+		allStates.forEach {
+			setTitleColor(color, for: $0)
 		}
 	}
 	

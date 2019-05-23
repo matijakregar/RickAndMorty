@@ -15,6 +15,7 @@ class CharacterDetailViewController: UITableViewController {
 	@IBOutlet private var characterImageView: UIImageView!
 	@IBOutlet private var characterNameLabel: UILabel!
 	@IBOutlet private var favoriteButton: UIButton!
+	@IBOutlet private var favoriteIcon: UIImageView!
 	
 	var viewModel: CharacterDetailViewModel?
 	
@@ -38,7 +39,7 @@ class CharacterDetailViewController: UITableViewController {
 		characterImageView.loadImage(from: character.imageURL)
 		characterNameLabel.text = character.name
 		
-		adjustFavoriteButton(to: character)
+		adjustFavoriteDisplay(to: character)
 		
 		loadContent()
 	}
@@ -65,13 +66,14 @@ class CharacterDetailViewController: UITableViewController {
 		return listItem.isSelectable
 	}
 	
-	private func adjustFavoriteButton(to character: Character) {
+	private func adjustFavoriteDisplay(to character: Character) {
 		if character.isFavorite {
 			favoriteButton.setTitle(NSLocalizedString("Remove from Favorites", comment: "Favorites button title"))
 		}
 		else {
 			favoriteButton.setTitle(NSLocalizedString("Add to Favorites", comment: "Favorites button title"))
 		}
+		favoriteIcon.isHidden = !character.isFavorite
 	}
 	
 	@IBAction func toggleFavorite(_ sender: Any? = nil) {
@@ -86,7 +88,7 @@ class CharacterDetailViewController: UITableViewController {
 			FavoritesManager.addFavorite(character: character)
 		}
 		
-		adjustFavoriteButton(to: character)
+		adjustFavoriteDisplay(to: character)
 	}
 	
 	// MARK: - Navigation
