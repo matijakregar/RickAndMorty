@@ -56,6 +56,7 @@
 		D4109E002295A94C00597A49 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DFF2295A94C00597A49 /* UIButton.swift */; };
 		D4109E022295ADF500597A49 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109E012295ADF500597A49 /* MainTabBarController.swift */; };
 		D4109E042296800000597A49 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109E032296800000597A49 /* RoundedButton.swift */; };
+		D4109E06229687F100597A49 /* FavoritesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109E05229687F100597A49 /* FavoritesTest.swift */; };
 		D4580FB22292A16200D0E8F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4580FB12292A16200D0E8F7 /* AppDelegate.swift */; };
 		D4580FB92292A16200D0E8F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4580FB72292A16200D0E8F7 /* Main.storyboard */; };
 		D4580FBB2292A16300D0E8F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4580FBA2292A16300D0E8F7 /* Assets.xcassets */; };
@@ -131,6 +132,7 @@
 		D4109DFF2295A94C00597A49 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		D4109E012295ADF500597A49 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		D4109E032296800000597A49 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		D4109E05229687F100597A49 /* FavoritesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTest.swift; sourceTree = "<group>"; };
 		D4580FAE2292A16200D0E8F7 /* RickAndMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4580FB12292A16200D0E8F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4580FB82292A16200D0E8F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -366,6 +368,7 @@
 				D4109D8E2293D28700597A49 /* Sample.swift */,
 				D4109D902293D2A800597A49 /* DecodingTests.swift */,
 				D4109D962293E5D200597A49 /* QueryTests.swift */,
+				D4109E05229687F100597A49 /* FavoritesTest.swift */,
 				D4580FCA2292A16300D0E8F7 /* Info.plist */,
 			);
 			path = RickAndMortyTests;
@@ -573,6 +576,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4109D912293D2A800597A49 /* DecodingTests.swift in Sources */,
+				D4109E06229687F100597A49 /* FavoritesTest.swift in Sources */,
 				D4109D8F2293D28700597A49 /* Sample.swift in Sources */,
 				D4109D972293E5D200597A49 /* QueryTests.swift in Sources */,
 			);
