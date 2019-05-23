@@ -74,6 +74,12 @@
 		D487F7BB229352B40019D9B3 /* Character.json in Resources */ = {isa = PBXBuildFile; fileRef = D487F7BA229352B40019D9B3 /* Character.json */; };
 		D487F7BD229352DB0019D9B3 /* Characters.json in Resources */ = {isa = PBXBuildFile; fileRef = D487F7BC229352DB0019D9B3 /* Characters.json */; };
 		D487F7BF229361780019D9B3 /* Location.json in Resources */ = {isa = PBXBuildFile; fileRef = D487F7BE229361780019D9B3 /* Location.json */; };
+		D4F3C0932296AB9400012631 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F3C0922296AB9400012631 /* ContainerView.swift */; };
+		D4F3C0952296ABB000012631 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F3C0942296ABB000012631 /* BackgroundView.swift */; };
+		D4F3C0972296ABBB00012631 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F3C0962296ABBB00012631 /* OverlayView.swift */; };
+		D4F3C0992296ABCB00012631 /* TitleColoredLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F3C0982296ABCB00012631 /* TitleColoredLabel.swift */; };
+		D4F3C09B2296ABD500012631 /* TextColoredLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F3C09A2296ABD500012631 /* TextColoredLabel.swift */; };
+		D4F3C09D2296ABF300012631 /* AccentColoredLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F3C09C2296ABF300012631 /* AccentColoredLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +164,12 @@
 		D487F7BA229352B40019D9B3 /* Character.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Character.json; sourceTree = "<group>"; };
 		D487F7BC229352DB0019D9B3 /* Characters.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Characters.json; sourceTree = "<group>"; };
 		D487F7BE229361780019D9B3 /* Location.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Location.json; sourceTree = "<group>"; };
+		D4F3C0922296AB9400012631 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
+		D4F3C0942296ABB000012631 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		D4F3C0962296ABBB00012631 /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
+		D4F3C0982296ABCB00012631 /* TitleColoredLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleColoredLabel.swift; sourceTree = "<group>"; };
+		D4F3C09A2296ABD500012631 /* TextColoredLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextColoredLabel.swift; sourceTree = "<group>"; };
+		D4F3C09C2296ABF300012631 /* AccentColoredLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccentColoredLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -306,6 +318,12 @@
 			children = (
 				D4109DD6229551D100597A49 /* Theme.swift */,
 				D4109E032296800000597A49 /* RoundedButton.swift */,
+				D4F3C0922296AB9400012631 /* ContainerView.swift */,
+				D4F3C0942296ABB000012631 /* BackgroundView.swift */,
+				D4F3C0962296ABBB00012631 /* OverlayView.swift */,
+				D4F3C0982296ABCB00012631 /* TitleColoredLabel.swift */,
+				D4F3C09A2296ABD500012631 /* TextColoredLabel.swift */,
+				D4F3C09C2296ABF300012631 /* AccentColoredLabel.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -548,6 +566,7 @@
 				D4109DA22293F0DA00597A49 /* DecodingManager.swift in Sources */,
 				D4109DF5229598F000597A49 /* StaticCharactersViewModel.swift in Sources */,
 				D4109DD322953E6200597A49 /* CharacterTableViewCell.swift in Sources */,
+				D4F3C0952296ABB000012631 /* BackgroundView.swift in Sources */,
 				D4109E0C229692A300597A49 /* NibLinkedView.swift in Sources */,
 				D4580FD82292B51E00D0E8F7 /* Location.swift in Sources */,
 				D4109DFB22959E2F00597A49 /* FavoriteCharactersViewModel.swift in Sources */,
@@ -558,16 +577,20 @@
 				D487F7B62293430C0019D9B3 /* Query.swift in Sources */,
 				D4109DAD2293F45800597A49 /* PostParameterEncoder.swift in Sources */,
 				D4109DB52294209A00597A49 /* CharactersViewModelDelegate.swift in Sources */,
+				D4F3C0932296AB9400012631 /* ContainerView.swift in Sources */,
 				D4109D9E2293EFD100597A49 /* NetworkingError.swift in Sources */,
+				D4F3C0992296ABCB00012631 /* TitleColoredLabel.swift in Sources */,
 				D4109E002295A94C00597A49 /* UIButton.swift in Sources */,
 				D4109DAB2293F43E00597A49 /* HeaderEncoder.swift in Sources */,
 				D4109DD7229551D100597A49 /* Theme.swift in Sources */,
 				D4109DBB2294267D00597A49 /* CharactersViewController.swift in Sources */,
+				D4F3C09B2296ABD500012631 /* TextColoredLabel.swift in Sources */,
 				D4109DF22295920500597A49 /* LocationDetailViewModel.swift in Sources */,
 				D4109DE82295720200597A49 /* PropertyListDisplayable.swift in Sources */,
 				D4109DAF2293F47000597A49 /* URLParameterEncoder.swift in Sources */,
 				D487F7B822934F640019D9B3 /* ListResponse.swift in Sources */,
 				D4109DCC229531BF00597A49 /* UIImageView.swift in Sources */,
+				D4F3C09D2296ABF300012631 /* AccentColoredLabel.swift in Sources */,
 				D4109DCE229534C400597A49 /* UIView.swift in Sources */,
 				D4580FDB2292C24800D0E8F7 /* Queryable.swift in Sources */,
 				D4109D932293D37000597A49 /* ObjectResponse.swift in Sources */,
@@ -578,6 +601,7 @@
 				D4109DDD229567D600597A49 /* CharacterDetailViewController.swift in Sources */,
 				D4580FD62292B51500D0E8F7 /* RMCharacter.swift in Sources */,
 				D4109DC32295297C00597A49 /* NSObject.swift in Sources */,
+				D4F3C0972296ABBB00012631 /* OverlayView.swift in Sources */,
 				D4109DC02295294600597A49 /* NibBackedCell.swift in Sources */,
 				D4109D9C2293EFA200597A49 /* Endpoint.swift in Sources */,
 				D4109DFE22959F6200597A49 /* FavoritesManager.swift in Sources */,
@@ -761,6 +785,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 93TVZG5NS7;
 				INFOPLIST_FILE = RickAndMorty/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -779,6 +804,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 93TVZG5NS7;
 				INFOPLIST_FILE = RickAndMorty/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

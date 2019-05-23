@@ -26,6 +26,7 @@ class CharacterDetailViewController: UITableViewController {
 		
 		headerContainerView.layer.cornerRadius = Theme.View.cornerRadius
 		footerContainerView.layer.cornerRadius = Theme.View.cornerRadius
+		favoriteIcon.tintColor = Theme.Colors.title
 		
 		tableView.tableHeaderView?.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.width)
 		
