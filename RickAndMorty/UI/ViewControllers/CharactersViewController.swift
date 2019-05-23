@@ -29,6 +29,7 @@ class CharactersViewController: UITableViewController {
 		// Disable pull to refresh if viewModel can't reload data.
 		if viewModel is DataReloadable {
 			refreshContent()
+			showActivityIndicator()
 		}
 		else {
 			refreshControl = nil
@@ -131,6 +132,7 @@ extension CharactersViewController: CharactersViewModelDelegate {
 	func viewModel(_ viewModel: CharactersViewModel, didLoadDataFor indexPaths: [IndexPath]?) {
 		DispatchQueue.main.async {
 			self.refreshControl?.endRefreshingIfNeeded()
+			self.hideActivityIndicator()
 			
 			self.emptyListLabel.isHidden = viewModel.characters.count > 0
 			
@@ -147,6 +149,7 @@ extension CharactersViewController: CharactersViewModelDelegate {
 	
 	func viewModel(_ viewModel: CharactersViewModel, didFailLoadingWith error: Error) {
 		DispatchQueue.main.async {
+			self.hideActivityIndicator()
 			self.refreshControl?.endRefreshingIfNeeded()
 			print("Characters loading error: \(error)")
 			self.showAlert(for: error)

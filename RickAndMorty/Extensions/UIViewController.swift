@@ -21,4 +21,47 @@ extension UIViewController {
 		present(alertController, animated: true, completion: nil)
 	}
 	
+		@discardableResult
+	func showActivityIndicator(backgroundColor: UIColor? = Theme.Colors.activityCover, animated: Bool = false, completion: (() -> Void)? = nil) -> UIView? {
+			guard view.subviews.filter({ $0 is ActivityIndicatorView }).count == 0
+				else {
+					return nil
+			}
+	
+			let activityIndicatorView = ActivityIndicatorView(frame: view.bounds)
+			activityIndicatorView.alpha = 0
+			view.addSubview(activityIndicatorView)
+	
+			if let backgroundColor = backgroundColor {
+				activityIndicatorView.backgroundColor = backgroundColor
+			}
+			else {
+				activityIndicatorView.backgroundColor = view.backgroundColor?.withAlphaComponent(0.8)
+			}
+	
+			activityIndicatorView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+			
+			if animated {
+				activityIndicatorView.fadeIn(completion: { _ in
+					completion?()
+				})
+			}
+			else {
+				activityIndicatorView.alpha = 1.0
+				completion?()
+			}
+	
+			return activityIndicatorView
+		}
+	
+		func hideActivityIndicator(completion: (() -> Void)? = nil) {
+			view.subviews.filter({ $0 is ActivityIndicatorView }).forEach { subview in
+				subview.fadeOut(completion: { _ in
+					subview.removeFromSuperview()
+				})
+			}
+	
+			completion?()
+		}
+	
 }
