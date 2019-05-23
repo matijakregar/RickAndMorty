@@ -148,8 +148,8 @@ extension CharactersViewController: CharactersViewModelDelegate {
 	func viewModel(_ viewModel: CharactersViewModel, didFailLoadingWith error: Error) {
 		DispatchQueue.main.async {
 			self.refreshControl?.endRefreshingIfNeeded()
-			// TODO: Implement error message
 			print("Characters loading error: \(error)")
+			self.showAlert(for: error)
 		}
 	}
 	

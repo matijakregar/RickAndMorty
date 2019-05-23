@@ -17,21 +17,21 @@ enum NetworkingError: Error {
 	case corruptData
 	case httpError(statusCode: Int, request: URLRequest)
 	
-	var description: String {
+	var localizedDescription: String {
 		switch self {
 		case let .httpError(statusCode, request):
-			return "HTTPError statusCode: \(statusCode), request: \(request)"
+			return String(format: NSLocalizedString("HTTPError statusCode: %@, request: %@", comment: "Error description"), statusCode.description, request.description)
 			
 		case .emptyResponse:
-			return "Empty response"
+			return NSLocalizedString("Empty response.", comment: "Error description")
 		case .missingBaseURL:
-			return "No base URL set"
+			return NSLocalizedString("No base URL set.", comment: "Error description")
 		case .missingParameters:
-			return "Input parameters for the request missing"
+			return NSLocalizedString("Input parameters for the request missing.", comment: "Error description")
 		case .noHttpResponse:
-			return "Can't resolve HTTPURLResponse"
+			return NSLocalizedString("Can't resolve HTTPURLResponse.", comment: "Error description")
 		case .corruptData:
-			return "Loaded data is corrupt"
+			return NSLocalizedString("Loaded data is corrupt.", comment: "Error description")
 		}
 	}
 	

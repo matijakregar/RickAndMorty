@@ -51,8 +51,8 @@ class CharacterDetailViewController: UITableViewController {
 				case .success:
 					self?.tableView.reloadData()
 				case .failure(let error):
-					// TODO: Implement error message
 					print("Character detail loading error: \(error)")
+					self?.showAlert(for: error)
 				}
 			}
 		})
