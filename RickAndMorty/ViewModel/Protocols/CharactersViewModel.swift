@@ -13,6 +13,7 @@ protocol CharactersViewModel {
 	var characters: [Character] { get }
 	var totalCharactersCount: Int { get }
 	var title: String { get }
+	var emptyListMessage: String { get }
 	var delegate: CharactersViewModelDelegate? { get set }
 	
 }

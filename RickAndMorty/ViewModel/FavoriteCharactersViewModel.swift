@@ -16,6 +16,7 @@ class FavoriteCharactersViewModel: CharactersViewModel, DataReloadable {
 	}
 	
 	let title = NSLocalizedString("Favorite Characters", comment: "Screen title")
+	let emptyListMessage = NSLocalizedString("No favorites selected yet.", comment: "Empty list message")
 	
 	weak var delegate: CharactersViewModelDelegate?
 	

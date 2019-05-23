@@ -16,6 +16,7 @@ class StaticCharactersViewModel: CharactersViewModel {
 	}
 	
 	private(set) var title: String
+	let emptyListMessage = NSLocalizedString("No characters here.", comment: "Empty list message")
 	
 	weak var delegate: CharactersViewModelDelegate?
 	

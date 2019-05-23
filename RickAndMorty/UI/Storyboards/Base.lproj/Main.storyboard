@@ -24,9 +24,22 @@
                             <color key="backgroundColor" name="BackgroundColor"/>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="2w5-SO-ahz">
-                            <rect key="frame" x="0.0" y="8" width="414" height="44"/>
+                            <rect key="frame" x="0.0" y="8" width="414" height="124"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Empty list placeholder" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJd-Kw-GGV">
+                                    <rect key="frame" x="16" y="60" width="382" height="24"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                    <color key="textColor" name="TextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
                             <color key="backgroundColor" name="BackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="NJd-Kw-GGV" firstAttribute="top" secondItem="2w5-SO-ahz" secondAttribute="top" constant="60" id="1kz-qO-fBd"/>
+                                <constraint firstItem="NJd-Kw-GGV" firstAttribute="leading" secondItem="2w5-SO-ahz" secondAttribute="leading" constant="16" id="GbY-pb-udh"/>
+                                <constraint firstAttribute="trailing" secondItem="NJd-Kw-GGV" secondAttribute="trailing" constant="16" id="bCy-Td-fcQ"/>
+                            </constraints>
                         </view>
                         <connections>
                             <outlet property="dataSource" destination="4Br-tF-kVR" id="IF7-zq-ulm"/>
@@ -44,12 +57,13 @@
                         </connections>
                     </refreshControl>
                     <connections>
+                        <outlet property="emptyListLabel" destination="NJd-Kw-GGV" id="xzm-DS-RWt"/>
                         <segue destination="v3p-SJ-7hR" kind="show" identifier="showCharacterDetail" id="zUZ-WG-HHZ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dcQ-I2-JFr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1610" y="-329"/>
+            <point key="canvasLocation" x="1608.6956521739132" y="-329.46428571428572"/>
         </scene>
         <!--Favorites-->
         <scene sceneID="bL9-Fv-oKQ">
@@ -311,7 +325,7 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="N02-IG-vo7"/>
+        <segue reference="zUZ-WG-HHZ"/>
         <segue reference="Uz1-hl-4q6"/>
     </inferredMetricsTieBreakers>
 </document>
