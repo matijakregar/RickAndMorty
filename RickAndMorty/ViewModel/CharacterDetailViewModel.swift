@@ -10,9 +10,9 @@ import Foundation
 
 class CharacterDetailViewModel {
 	
-	private(set) var character: Character
+	private(set) var character: RMCharacter
 	
-	init(character: Character) {
+	init(character: RMCharacter) {
 		self.character = character
 	}
 	
@@ -29,7 +29,7 @@ class CharacterDetailViewModel {
 	}
 	
 	func loadCharacter(completion: @escaping (Result<Bool, Error>) -> Void) {
-		NetworkingManager.objectRequest(id: character.id) { [weak self] (result: ObjectResult<Character>) in
+		NetworkingManager.objectRequest(id: character.id) { [weak self] (result: ObjectResult<RMCharacter>) in
 			switch result {
 			case .success(let objectResponse):
 				self?.character = objectResponse.object

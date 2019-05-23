@@ -94,6 +94,20 @@ extension CharactersViewController {
 		return cell
 	}
 	
+	override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+		return viewModel.canDeleteCharacters
+	}
+	
+	override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+		if (editingStyle == .delete) {
+			if let favoriteCharactersViewModel = viewModel as? FavoriteCharactersViewModel {
+				let character = favoriteCharactersViewModel.characters[indexPath.row]
+				favoriteCharactersViewModel.removeFromFavorites(character: character)
+				tableView.deleteRows(at: [indexPath], with: .fade)
+			}
+		}
+	}
+	
 }
 
 // MARK: - UITableViewDelegate

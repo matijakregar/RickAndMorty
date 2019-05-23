@@ -12,11 +12,11 @@ import XCTest
 class QueryTests: XCTestCase {
 	// WARNING: These tests are pretty brittle because of spaces.
 	func testSingleCharacter() {
-		let query = Query<Character>.object(id: "21")
+		let query = Query<RMCharacter>.object(id: "21")
 		XCTAssertEqual(query.stringValue, "query { character(id: 21){ id, name, species, image, origin { id, name }, location { id, name } } }")
 	}
 	func testCharactersPage() {
-		let query = Query<Character>.list(page: 1)
+		let query = Query<RMCharacter>.list(page: 1)
 		XCTAssertEqual(query.stringValue, "query { characters(page: 1){ info { count, next } results { id, name, species, image } } }")
 	}
 	func testSingleLocation() {

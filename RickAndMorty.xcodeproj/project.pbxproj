@@ -65,7 +65,7 @@
 		D4580FB92292A16200D0E8F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4580FB72292A16200D0E8F7 /* Main.storyboard */; };
 		D4580FBB2292A16300D0E8F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4580FBA2292A16300D0E8F7 /* Assets.xcassets */; };
 		D4580FBE2292A16300D0E8F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4580FBC2292A16300D0E8F7 /* LaunchScreen.storyboard */; };
-		D4580FD62292B51500D0E8F7 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4580FD52292B51500D0E8F7 /* Character.swift */; };
+		D4580FD62292B51500D0E8F7 /* RMCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4580FD52292B51500D0E8F7 /* RMCharacter.swift */; };
 		D4580FD82292B51E00D0E8F7 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4580FD72292B51E00D0E8F7 /* Location.swift */; };
 		D4580FDB2292C24800D0E8F7 /* Queryable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4580FDA2292C24800D0E8F7 /* Queryable.swift */; };
 		D487F7B422933FE60019D9B3 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = D487F7B322933FE60019D9B3 /* Info.swift */; };
@@ -149,7 +149,7 @@
 		D4580FBF2292A16300D0E8F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4580FC42292A16300D0E8F7 /* RickAndMortyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RickAndMortyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4580FCA2292A16300D0E8F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D4580FD52292B51500D0E8F7 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		D4580FD52292B51500D0E8F7 /* RMCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharacter.swift; sourceTree = "<group>"; };
 		D4580FD72292B51E00D0E8F7 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		D4580FDA2292C24800D0E8F7 /* Queryable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queryable.swift; sourceTree = "<group>"; };
 		D487F7B322933FE60019D9B3 /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
@@ -399,7 +399,7 @@
 			children = (
 				D4109D942293DB0A00597A49 /* Protocols */,
 				D4109D952293DF9100597A49 /* Responses */,
-				D4580FD52292B51500D0E8F7 /* Character.swift */,
+				D4580FD52292B51500D0E8F7 /* RMCharacter.swift */,
 				D4580FD72292B51E00D0E8F7 /* Location.swift */,
 				D487F7B322933FE60019D9B3 /* Info.swift */,
 			);
@@ -576,7 +576,7 @@
 				D4109DEC2295734700597A49 /* LocationItem.swift in Sources */,
 				D4109D9A2293EEDD00597A49 /* Constants.swift in Sources */,
 				D4109DDD229567D600597A49 /* CharacterDetailViewController.swift in Sources */,
-				D4580FD62292B51500D0E8F7 /* Character.swift in Sources */,
+				D4580FD62292B51500D0E8F7 /* RMCharacter.swift in Sources */,
 				D4109DC32295297C00597A49 /* NSObject.swift in Sources */,
 				D4109DC02295294600597A49 /* NibBackedCell.swift in Sources */,
 				D4109D9C2293EFA200597A49 /* Endpoint.swift in Sources */,

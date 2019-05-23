@@ -10,7 +10,7 @@ import Foundation
 
 class PagedCharactersViewModel: CharactersViewModel, PagedViewModel, DataReloadable {
 	
-	private(set) var characters = [Character]()
+	private(set) var characters = [RMCharacter]()
 	private(set) var totalCharactersCount = 0
 	
 	let title = NSLocalizedString("All Characters", comment: "Screen title")
@@ -24,7 +24,7 @@ class PagedCharactersViewModel: CharactersViewModel, PagedViewModel, DataReloada
 	func reloadData() {
 		currentDataTask?.cancel()
 		nextPage = 1
-		characters = [Character]()
+		characters = [RMCharacter]()
 		loadNextPageIfPossible()
 	}
 	
@@ -35,7 +35,7 @@ class PagedCharactersViewModel: CharactersViewModel, PagedViewModel, DataReloada
 				return
 		}
 		
-		currentDataTask = NetworkingManager.listRequest(page: nextPage) { [weak self] (result: ListResult<Character>) in
+		currentDataTask = NetworkingManager.listRequest(page: nextPage) { [weak self] (result: ListResult<RMCharacter>) in
 			guard let strongSelf = self
 				else {
 					return

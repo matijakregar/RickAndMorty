@@ -10,10 +10,20 @@ import Foundation
 
 protocol CharactersViewModel {
 	
-	var characters: [Character] { get }
+	var characters: [RMCharacter] { get }
 	var totalCharactersCount: Int { get }
 	var title: String { get }
 	var emptyListMessage: String { get }
+	var canDeleteCharacters: Bool { get }
 	var delegate: CharactersViewModelDelegate? { get set }
+	
+}
+
+
+extension CharactersViewModel {
+	
+	var canDeleteCharacters: Bool {
+		return false
+	}
 	
 }

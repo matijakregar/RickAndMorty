@@ -19,7 +19,7 @@ class DecodingTests: XCTestCase {
 		}
 		
 		do {
-			let objectResponse = try JSONDecoder().decode(ObjectResponse<Character>.self, from: json)
+			let objectResponse = try JSONDecoder().decode(ObjectResponse<RMCharacter>.self, from: json)
 			let character = objectResponse.object
 			
 			XCTAssertEqual(character.id, "21")
@@ -46,7 +46,7 @@ class DecodingTests: XCTestCase {
 		
 		do {
 			let decoder = JSONDecoder()
-			let listResponse = try decoder.decode(ListResponse<Character>.self, from: json)
+			let listResponse = try decoder.decode(ListResponse<RMCharacter>.self, from: json)
 			
 			let info = listResponse.info
 			

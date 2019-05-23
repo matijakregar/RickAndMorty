@@ -10,7 +10,7 @@ import Foundation
 
 class StaticCharactersViewModel: CharactersViewModel {
 	
-	private(set) var characters = [Character]()
+	private(set) var characters = [RMCharacter]()
 	var totalCharactersCount: Int {
 		return characters.count
 	}
@@ -20,7 +20,7 @@ class StaticCharactersViewModel: CharactersViewModel {
 	
 	weak var delegate: CharactersViewModelDelegate?
 	
-	init(characters: [Character], title: String) {
+	init(characters: [RMCharacter], title: String) {
 		self.characters = characters
 		self.title = title
 	}

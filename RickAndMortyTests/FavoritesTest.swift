@@ -38,7 +38,7 @@ class FavoritesTest: XCTestCase {
 	}
 	
 	func testAddingAndRemoving() {
-		guard let character: Character = Sample.loadAndDecode(named: "Character")
+		guard let character: RMCharacter = Sample.loadAndDecode(named: "Character")
 			else {
 				XCTFail()
 				return

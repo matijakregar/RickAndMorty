@@ -39,7 +39,9 @@ class CharacterDetailViewController: UITableViewController {
 		characterImageView.loadImage(from: character.imageURL)
 		characterNameLabel.text = character.name
 		
-		adjustFavoriteDisplay(to: character)
+		NotificationCenter.default.addObserver(self, selector: #selector(adjustFavoriteDisplay), name: NSNotification.Name(Constants.Notification.favoritesChanged), object: nil)
+		
+		adjustFavoriteDisplay()
 		
 		loadContent()
 	}
@@ -72,7 +74,12 @@ class CharacterDetailViewController: UITableViewController {
 		return listItem.isSelectable
 	}
 	
-	private func adjustFavoriteDisplay(to character: Character) {
+	@objc private func adjustFavoriteDisplay() {
+		guard let character = viewModel?.character
+			else {
+				return
+		}
+		
 		if character.isFavorite {
 			favoriteButton.setTitle(NSLocalizedString("Remove from Favorites", comment: "Favorites button title"))
 		}
@@ -94,7 +101,7 @@ class CharacterDetailViewController: UITableViewController {
 			FavoritesManager.addFavorite(character: character)
 		}
 		
-		adjustFavoriteDisplay(to: character)
+		adjustFavoriteDisplay()
 	}
 	
 	// MARK: - Navigation

@@ -10,13 +10,15 @@ import Foundation
 
 class FavoriteCharactersViewModel: CharactersViewModel, DataReloadable {
 	
-	private(set) var characters = [Character]()
+	private(set) var characters = [RMCharacter]()
 	var totalCharactersCount: Int {
 		return characters.count
 	}
 	
 	let title = NSLocalizedString("Favorite Characters", comment: "Screen title")
 	let emptyListMessage = NSLocalizedString("No favorites selected yet.", comment: "Empty list message")
+	
+	let canDeleteCharacters: Bool = true
 	
 	weak var delegate: CharactersViewModelDelegate?
 	
@@ -27,11 +29,16 @@ class FavoriteCharactersViewModel: CharactersViewModel, DataReloadable {
 	@objc func reloadData() {
 		guard let retrievedCharacters = FavoritesManager.favoriteCharacters
 			else {
-				characters = [Character]()
+				characters = [RMCharacter]()
 				return
 		}
 		characters = retrievedCharacters
 		delegate?.viewModel(self, didLoadDataFor: .none)
+	}
+	
+	func removeFromFavorites(character: RMCharacter) {
+		FavoritesManager.removeFavorite(character: character)
+		characters = FavoritesManager.favoriteCharacters ?? [RMCharacter]()
 	}
 	
 }
