@@ -33,6 +33,8 @@ class CharacterDetailViewController: UITableViewController {
 				return
 		}
 		
+		navigationItem.title = character.name
+		
 		characterImageView.loadImage(from: character.imageURL)
 		characterNameLabel.text = character.name
 		

@@ -29,6 +29,8 @@ class LocationDetailViewController: UITableViewController {
 				return
 		}
 		
+		navigationItem.title = location.name
+		
 		locationNameLabel.text = location.name
 		
 		loadContent()
@@ -66,7 +68,7 @@ class LocationDetailViewController: UITableViewController {
 				else {
 					return
 			}
-			let charactersViewModel = StaticCharactersViewModel(characters: charactersItem.characters)
+			let charactersViewModel = StaticCharactersViewModel(characters: charactersItem.characters, title: charactersItem.name)
 			charactersViewController.viewModel = charactersViewModel
 		default:
 			break

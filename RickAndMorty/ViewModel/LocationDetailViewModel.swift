@@ -22,7 +22,7 @@ class LocationDetailViewModel {
 			items.append(BasicPropertyListItem(name: NSLocalizedString("Type", comment: "Location property name"), value: type))
 		}
 		if let dimension = location.dimension {
-			items.append(BasicPropertyListItem(name: NSLocalizedString("Origin", comment: "Location property name"), value: dimension))
+			items.append(BasicPropertyListItem(name: NSLocalizedString("Dimension", comment: "Location property name"), value: dimension))
 		}
 		if let residents = location.residents {
 			items.append(CharactersItem(name: NSLocalizedString("Residents", comment: "Location property name"), characters: residents))

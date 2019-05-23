@@ -13,6 +13,8 @@ class PagedCharactersViewModel: CharactersViewModel, PagedViewModel, DataReloada
 	private(set) var characters = [Character]()
 	private(set) var totalCharactersCount = 0
 	
+	let title = NSLocalizedString("All Characters", comment: "Screen title")
+	
 	weak var delegate: CharactersViewModelDelegate?
 	
 	private var nextPage = 1

@@ -15,6 +15,8 @@ class FavoriteCharactersViewModel: CharactersViewModel, DataReloadable {
 		return characters.count
 	}
 	
+	let title = NSLocalizedString("Favorite Characters", comment: "Screen title")
+	
 	weak var delegate: CharactersViewModelDelegate?
 	
 	func reloadData() {

@@ -16,6 +16,8 @@ class CharactersViewController: UITableViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		navigationItem.title = viewModel.title
+		
 		viewModel.delegate = self
 		
 		// Register cell classes.

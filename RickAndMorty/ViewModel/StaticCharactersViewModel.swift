@@ -15,10 +15,13 @@ class StaticCharactersViewModel: CharactersViewModel {
 		return characters.count
 	}
 	
+	private(set) var title: String
+	
 	weak var delegate: CharactersViewModelDelegate?
 	
-	init(characters: [Character]) {
+	init(characters: [Character], title: String) {
 		self.characters = characters
+		self.title = title
 	}
 	
 }
