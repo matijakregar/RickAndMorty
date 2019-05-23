@@ -18,6 +18,8 @@ class FavoriteCharactersViewModel: CharactersViewModel, DataReloadable {
 	let title = NSLocalizedString("Favorite Characters", comment: "Screen title")
 	let emptyListMessage = NSLocalizedString("No favorites selected yet.", comment: "Empty list message")
 	
+	let canDeleteCharacters: Bool = true
+	
 	weak var delegate: CharactersViewModelDelegate?
 	
 	init() {
@@ -32,6 +34,11 @@ class FavoriteCharactersViewModel: CharactersViewModel, DataReloadable {
 		}
 		characters = retrievedCharacters
 		delegate?.viewModel(self, didLoadDataFor: .none)
+	}
+	
+	func removeFromFavorites(character: Character) {
+		FavoritesManager.removeFavorite(character: character)
+		characters = FavoritesManager.favoriteCharacters ?? [Character]()
 	}
 	
 }
