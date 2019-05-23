@@ -57,6 +57,10 @@
 		D4109E022295ADF500597A49 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109E012295ADF500597A49 /* MainTabBarController.swift */; };
 		D4109E042296800000597A49 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109E032296800000597A49 /* RoundedButton.swift */; };
 		D4109E06229687F100597A49 /* FavoritesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109E05229687F100597A49 /* FavoritesTest.swift */; };
+		D4109E092296917800597A49 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109E082296917800597A49 /* UIViewController.swift */; };
+		D4109E0C229692A300597A49 /* NibLinkedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109E0B229692A300597A49 /* NibLinkedView.swift */; };
+		D4109E0E2296934900597A49 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109E0D2296934900597A49 /* ActivityIndicatorView.swift */; };
+		D4109E102296935000597A49 /* ActivityIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4109E0F2296935000597A49 /* ActivityIndicatorView.xib */; };
 		D4580FB22292A16200D0E8F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4580FB12292A16200D0E8F7 /* AppDelegate.swift */; };
 		D4580FB92292A16200D0E8F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4580FB72292A16200D0E8F7 /* Main.storyboard */; };
 		D4580FBB2292A16300D0E8F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4580FBA2292A16300D0E8F7 /* Assets.xcassets */; };
@@ -133,6 +137,10 @@
 		D4109E012295ADF500597A49 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		D4109E032296800000597A49 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		D4109E05229687F100597A49 /* FavoritesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTest.swift; sourceTree = "<group>"; };
+		D4109E082296917800597A49 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		D4109E0B229692A300597A49 /* NibLinkedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLinkedView.swift; sourceTree = "<group>"; };
+		D4109E0D2296934900597A49 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
+		D4109E0F2296935000597A49 /* ActivityIndicatorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityIndicatorView.xib; sourceTree = "<group>"; };
 		D4580FAE2292A16200D0E8F7 /* RickAndMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4580FB12292A16200D0E8F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4580FB82292A16200D0E8F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -238,6 +246,7 @@
 			children = (
 				D4109DD5229551C300597A49 /* Theme */,
 				D4109DC82295304F00597A49 /* Protocols */,
+				D4109E0A2296928B00597A49 /* Components */,
 				D4109DBC22942A0F00597A49 /* Cells */,
 				D4109DDE22956BE300597A49 /* Storyboards */,
 				D4109DB92294262E00597A49 /* ViewControllers */,
@@ -278,6 +287,7 @@
 				D4109DD82295621600597A49 /* UIRefreshControl.swift */,
 				D4109DDA2295643100597A49 /* UIColor.swift */,
 				D4109DFF2295A94C00597A49 /* UIButton.swift */,
+				D4109E082296917800597A49 /* UIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -324,6 +334,16 @@
 				D4109DFD22959F6200597A49 /* FavoritesManager.swift */,
 			);
 			path = Persistence;
+			sourceTree = "<group>";
+		};
+		D4109E0A2296928B00597A49 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D4109E0B229692A300597A49 /* NibLinkedView.swift */,
+				D4109E0D2296934900597A49 /* ActivityIndicatorView.swift */,
+				D4109E0F2296935000597A49 /* ActivityIndicatorView.xib */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		D4580FA52292A16200D0E8F7 = {
@@ -495,6 +515,7 @@
 				D4580FBE2292A16300D0E8F7 /* LaunchScreen.storyboard in Resources */,
 				D4109DD422953E6200597A49 /* CharacterTableViewCell.xib in Resources */,
 				D4580FBB2292A16300D0E8F7 /* Assets.xcassets in Resources */,
+				D4109E102296935000597A49 /* ActivityIndicatorView.xib in Resources */,
 				D4109DE62295718E00597A49 /* PropertyTableViewCell.xib in Resources */,
 				D4580FB92292A16200D0E8F7 /* Main.storyboard in Resources */,
 			);
@@ -527,10 +548,12 @@
 				D4109DA22293F0DA00597A49 /* DecodingManager.swift in Sources */,
 				D4109DF5229598F000597A49 /* StaticCharactersViewModel.swift in Sources */,
 				D4109DD322953E6200597A49 /* CharacterTableViewCell.swift in Sources */,
+				D4109E0C229692A300597A49 /* NibLinkedView.swift in Sources */,
 				D4580FD82292B51E00D0E8F7 /* Location.swift in Sources */,
 				D4109DFB22959E2F00597A49 /* FavoriteCharactersViewModel.swift in Sources */,
 				D4109DF722959A1600597A49 /* PagedViewModel.swift in Sources */,
 				D4109DA42293F0FF00597A49 /* NetworkingManager.swift in Sources */,
+				D4109E0E2296934900597A49 /* ActivityIndicatorView.swift in Sources */,
 				D4109DB322941F8700597A49 /* CharactersViewModel.swift in Sources */,
 				D487F7B62293430C0019D9B3 /* Query.swift in Sources */,
 				D4109DAD2293F45800597A49 /* PostParameterEncoder.swift in Sources */,
@@ -563,6 +586,7 @@
 				D4109DCA2295306900597A49 /* CharacterListDisplayable.swift in Sources */,
 				D4109DE022956BFC00597A49 /* Segue.swift in Sources */,
 				D4109DA62293F22E00597A49 /* QueryEndpoint.swift in Sources */,
+				D4109E092296917800597A49 /* UIViewController.swift in Sources */,
 				D4109DB7229421FD00597A49 /* PagedCharactersViewModel.swift in Sources */,
 				D4109DEA229572E100597A49 /* BasicPropertyListItem.swift in Sources */,
 				D4109E042296800000597A49 /* RoundedButton.swift in Sources */,

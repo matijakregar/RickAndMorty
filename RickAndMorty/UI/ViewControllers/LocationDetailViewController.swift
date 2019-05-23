@@ -37,15 +37,21 @@ class LocationDetailViewController: UITableViewController {
 	}
 	
 	private func loadContent() {
-		viewModel?.loadLocation(completion: { [weak self] (result) in
+		guard let viewModel = viewModel
+			else {
+				return
+		}
+		showActivityIndicator()
+		viewModel.loadLocation(completion: { [weak self] (result) in
 			DispatchQueue.main.async {
 				switch result {
 				case .success:
 					self?.tableView.reloadData()
 				case .failure(let error):
-					// TODO: Implement error message
 					print("Character detail loading error: \(error)")
+					self?.showAlert(for: error)
 				}
+				self?.hideActivityIndicator()
 			}
 		})
 	}

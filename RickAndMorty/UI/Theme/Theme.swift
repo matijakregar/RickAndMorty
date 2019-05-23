@@ -20,6 +20,7 @@ struct Theme {
 		static let container: UIColor = UIColor(named: "ContainerColor")!
 		static let highlightedContainer: UIColor = container.lightened
 		static let overlay: UIColor = UIColor(named: "OverlayColor")!
+		static let activityCover: UIColor = background.withAlphaComponent(0.75)
 		
 		static let accent: UIColor = UIColor(named: "AccentColor")!
 		static let destructive: UIColor = UIColor(named: "DestructiveColor")!
