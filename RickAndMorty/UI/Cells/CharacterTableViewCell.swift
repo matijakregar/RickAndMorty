@@ -39,7 +39,15 @@ class CharacterTableViewCell: UITableViewCell, NibBackedTableViewCell {
 	}
 	
 	override func setHighlighted(_ highlighted: Bool, animated: Bool) {
-		containerView.backgroundColor = highlighted ? Theme.Colors.highlightedContainer : Theme.Colors.container
+		let color = highlighted ? Theme.Colors.highlightedContainer : Theme.Colors.container
+		if animated {
+			UIView.animate(withDuration: .shortAnimation) {
+				self.containerView.backgroundColor = color
+			}
+		}
+		else {
+			containerView.backgroundColor = color
+		}
 	}
 	
 	override func setSelected(_ selected: Bool, animated: Bool) {		
