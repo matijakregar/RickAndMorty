@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,9 +21,9 @@
                 <subviews>
                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="8XM-pM-W67">
                         <rect key="frame" x="141.5" y="31.5" width="37" height="37"/>
-                        <color key="color" name="TextColor"/>
+                        <color key="color" red="0.61960784310000006" green="0.61960784310000006" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </activityIndicatorView>
-                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fj0-9J-j12">
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fj0-9J-j12" customClass="ContainerView" customModule="RickAndMorty" customModuleProvider="target">
                         <rect key="frame" x="16" y="8" width="288" height="83.5"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zdO-93-tky">
@@ -36,22 +35,21 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="K0K-o6-AbQ">
                                 <rect key="frame" x="107.5" y="20.5" width="172.5" height="42.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name placeholder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xL2-8b-zjP">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name placeholder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xL2-8b-zjP" customClass="TitleColoredLabel" customModule="RickAndMorty" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="172.5" height="20.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                        <color key="textColor" name="TitleColor"/>
+                                        <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Species placeholder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O9m-Lb-CG2">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Species placeholder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O9m-Lb-CG2" customClass="TextColoredLabel" customModule="RickAndMorty" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="172.5" height="18"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                        <color key="textColor" name="TextColor"/>
+                                        <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" name="ContainerColor"/>
                         <constraints>
                             <constraint firstItem="zdO-93-tky" firstAttribute="leading" secondItem="fj0-9J-j12" secondAttribute="leading" id="KiQ-yb-8nM"/>
                             <constraint firstItem="zdO-93-tky" firstAttribute="top" secondItem="fj0-9J-j12" secondAttribute="top" id="MPy-ge-JQS"/>
@@ -62,7 +60,7 @@
                         </constraints>
                     </view>
                 </subviews>
-                <color key="backgroundColor" name="BackgroundColor"/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="fj0-9J-j12" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="RLH-vJ-ptS"/>
                     <constraint firstItem="8XM-pM-W67" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="bDp-mZ-eX9"/>
@@ -83,18 +81,4 @@
             <point key="canvasLocation" x="50.724637681159422" y="53.571428571428569"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <namedColor name="BackgroundColor">
-            <color red="0.12549019607843137" green="0.13725490196078433" blue="0.17647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="ContainerColor">
-            <color red="0.14509803921568629" green="0.16078431372549021" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="TextColor">
-            <color red="0.61960784313725492" green="0.61960784313725492" blue="0.61960784313725492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="TitleColor">
-            <color red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-    </resources>
 </document>

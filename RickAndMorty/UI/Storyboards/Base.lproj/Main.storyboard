@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,23 +17,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="KWy-kd-dmn">
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="KWy-kd-dmn" customClass="BackgroundView" customModule="RickAndMorty" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="8"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" name="BackgroundColor"/>
                         </view>
-                        <view key="tableFooterView" contentMode="scaleToFill" id="2w5-SO-ahz">
+                        <view key="tableFooterView" contentMode="scaleToFill" id="2w5-SO-ahz" customClass="BackgroundView" customModule="RickAndMorty" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="8" width="414" height="124"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Empty list placeholder" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJd-Kw-GGV">
+                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Empty list placeholder" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJd-Kw-GGV" customClass="TextColoredLabel" customModule="RickAndMorty" customModuleProvider="target">
                                     <rect key="frame" x="16" y="60" width="382" height="24"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                    <color key="textColor" name="TextColor"/>
+                                    <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <color key="backgroundColor" name="BackgroundColor"/>
                             <constraints>
                                 <constraint firstItem="NJd-Kw-GGV" firstAttribute="top" secondItem="2w5-SO-ahz" secondAttribute="top" constant="60" id="1kz-qO-fBd"/>
                                 <constraint firstItem="NJd-Kw-GGV" firstAttribute="leading" secondItem="2w5-SO-ahz" secondAttribute="leading" constant="16" id="GbY-pb-udh"/>
@@ -51,7 +48,7 @@
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="jxJ-RK-KNL">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" name="TextColor"/>
+                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <connections>
                             <action selector="refreshContent:" destination="4Br-tF-kVR" eventType="valueChanged" id="PNd-uh-Dn0"/>
                         </connections>
@@ -90,36 +87,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <view key="tableHeaderView" clipsSubviews="YES" contentMode="scaleToFill" id="itd-jm-fBa">
+                        <view key="tableHeaderView" clipsSubviews="YES" contentMode="scaleToFill" id="itd-jm-fBa" customClass="BackgroundView" customModule="RickAndMorty" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="371"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7gE-bH-rHV">
+                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7gE-bH-rHV" customClass="ContainerView" customModule="RickAndMorty" customModuleProvider="target">
                                     <rect key="frame" x="16" y="16" width="382" height="363"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xoi-nO-smW">
                                             <rect key="frame" x="0.0" y="0.0" width="382" height="355"/>
                                         </imageView>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfB-a8-24X">
-                                            <rect key="frame" x="0.0" y="287" width="382" height="68"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfB-a8-24X" customClass="OverlayView" customModule="RickAndMorty" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="291.5" width="382" height="63.5"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="nBS-Qr-mOo">
-                                                    <rect key="frame" x="16" y="16" width="350" height="36"/>
+                                                    <rect key="frame" x="16" y="16" width="350" height="31.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name placeholder" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IDw-ge-lA4">
-                                                            <rect key="frame" x="0.0" y="0.0" width="323" height="36"/>
-                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                                            <color key="textColor" name="TitleColor"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name placeholder" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IDw-ge-lA4" customClass="TitleColoredLabel" customModule="RickAndMorty" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="323" height="31.5"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                            <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="FavoritesIcon" translatesAutoresizingMaskIntoConstraints="NO" id="wVM-DO-8Mb">
-                                                            <rect key="frame" x="327" y="6.5" width="23" height="23"/>
-                                                            <color key="tintColor" name="TitleColor"/>
+                                                            <rect key="frame" x="327" y="4.5" width="23" height="23"/>
                                                         </imageView>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
-                                            <color key="backgroundColor" name="OverlayColor"/>
                                             <constraints>
                                                 <constraint firstItem="nBS-Qr-mOo" firstAttribute="leading" secondItem="gfB-a8-24X" secondAttribute="leading" constant="16" id="BMa-ei-1zX"/>
                                                 <constraint firstItem="nBS-Qr-mOo" firstAttribute="top" secondItem="gfB-a8-24X" secondAttribute="top" constant="16" id="RGk-Xk-DYO"/>
@@ -128,7 +123,6 @@
                                             </constraints>
                                         </view>
                                     </subviews>
-                                    <color key="backgroundColor" name="ContainerColor"/>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="Xoi-nO-smW" secondAttribute="trailing" id="9GQ-Ty-PpA"/>
                                         <constraint firstItem="Xoi-nO-smW" firstAttribute="leading" secondItem="7gE-bH-rHV" secondAttribute="leading" id="Efi-u6-mxH"/>
@@ -139,7 +133,6 @@
                                     </constraints>
                                 </view>
                             </subviews>
-                            <color key="backgroundColor" name="BackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="7gE-bH-rHV" secondAttribute="trailing" constant="16" id="0va-0b-IzV"/>
                                 <constraint firstAttribute="bottom" secondItem="7gE-bH-rHV" secondAttribute="bottom" constant="-8" id="RHp-2s-to4"/>
@@ -148,13 +141,12 @@
                                 <constraint firstAttribute="bottom" secondItem="Xoi-nO-smW" secondAttribute="bottom" id="zqq-n0-KY1"/>
                             </constraints>
                         </view>
-                        <view key="tableFooterView" clipsSubviews="YES" contentMode="scaleToFill" id="hmd-dW-MMF">
+                        <view key="tableFooterView" clipsSubviews="YES" contentMode="scaleToFill" id="hmd-dW-MMF" customClass="BackgroundView" customModule="RickAndMorty" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="371" width="414" height="103"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MSe-NT-XcX">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MSe-NT-XcX" customClass="ContainerView" customModule="RickAndMorty" customModuleProvider="target">
                                     <rect key="frame" x="16" y="-8" width="382" height="16"/>
-                                    <color key="backgroundColor" name="ContainerColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="16" id="MEj-qD-VKo"/>
                                     </constraints>
@@ -167,7 +159,6 @@
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" name="BackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="MSe-NT-XcX" secondAttribute="trailing" constant="16" id="CUl-A9-PbB"/>
                                 <constraint firstItem="VTw-B9-7dj" firstAttribute="centerX" secondItem="hmd-dW-MMF" secondAttribute="centerX" id="I1J-lZ-flx"/>
@@ -239,21 +230,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <view key="tableHeaderView" clipsSubviews="YES" contentMode="scaleToFill" id="ofK-ky-NC6">
+                        <view key="tableHeaderView" clipsSubviews="YES" contentMode="scaleToFill" id="ofK-ky-NC6" customClass="BackgroundView" customModule="RickAndMorty" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="84"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JIg-Gb-j6O">
+                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JIg-Gb-j6O" customClass="ContainerView" customModule="RickAndMorty" customModuleProvider="target">
                                     <rect key="frame" x="16" y="16" width="382" height="76"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name placeholder" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fiu-1H-5qI">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name placeholder" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fiu-1H-5qI" customClass="TitleColoredLabel" customModule="RickAndMorty" customModuleProvider="target">
                                             <rect key="frame" x="16" y="24" width="350" height="36"/>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                            <color key="textColor" name="TitleColor"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                            <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" name="ContainerColor"/>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="fiu-1H-5qI" secondAttribute="trailing" constant="16" id="LpZ-vk-dri"/>
                                         <constraint firstAttribute="bottom" secondItem="fiu-1H-5qI" secondAttribute="bottom" constant="16" id="PXA-f3-KwJ"/>
@@ -262,7 +252,6 @@
                                     </constraints>
                                 </view>
                             </subviews>
-                            <color key="backgroundColor" name="BackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="JIg-Gb-j6O" secondAttribute="trailing" constant="16" id="6ps-OY-sX7"/>
                                 <constraint firstItem="JIg-Gb-j6O" firstAttribute="top" secondItem="ofK-ky-NC6" secondAttribute="top" constant="16" id="9fK-Ep-9kG"/>
@@ -270,16 +259,14 @@
                                 <constraint firstAttribute="bottom" secondItem="JIg-Gb-j6O" secondAttribute="bottom" constant="-8" id="uIo-WY-Iri"/>
                             </constraints>
                         </view>
-                        <view key="tableFooterView" clipsSubviews="YES" contentMode="scaleToFill" id="FzY-Hs-s0D">
+                        <view key="tableFooterView" clipsSubviews="YES" contentMode="scaleToFill" id="FzY-Hs-s0D" customClass="BackgroundView" customModule="RickAndMorty" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="84" width="414" height="24"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HMv-IS-qNp">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HMv-IS-qNp" customClass="ContainerView" customModule="RickAndMorty" customModuleProvider="target">
                                     <rect key="frame" x="16" y="-8" width="382" height="16"/>
-                                    <color key="backgroundColor" name="ContainerColor"/>
                                 </view>
                             </subviews>
-                            <color key="backgroundColor" name="BackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="HMv-IS-qNp" secondAttribute="bottom" constant="16" id="0OS-Hd-D5H"/>
                                 <constraint firstItem="HMv-IS-qNp" firstAttribute="leading" secondItem="FzY-Hs-s0D" secondAttribute="leading" constant="16" id="CzO-ts-aUo"/>
@@ -308,21 +295,6 @@
     <resources>
         <image name="CharactersIcon" width="23" height="23"/>
         <image name="FavoritesIcon" width="23" height="23"/>
-        <namedColor name="BackgroundColor">
-            <color red="0.12549019607843137" green="0.13725490196078433" blue="0.17647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="ContainerColor">
-            <color red="0.14509803921568629" green="0.16078431372549021" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="OverlayColor">
-            <color red="0.14509803921568629" green="0.16078431372549021" blue="0.20000000000000001" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="TextColor">
-            <color red="0.61960784313725492" green="0.61960784313725492" blue="0.61960784313725492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="TitleColor">
-            <color red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="zUZ-WG-HHZ"/>
