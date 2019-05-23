@@ -1,0 +1,173 @@
+//
+//  CharactersViewController.swift
+//  RickAndMorty
+//
+//  Created by Matija Kregar on 21/05/2019.
+//  Copyright © 2019 Matija Kregar. All rights reserved.
+//
+
+import UIKit
+
+class CharactersViewController: UITableViewController {
+	
+	@IBOutlet private var emptyListLabel: UILabel!
+	
+	// Default view model contains all available characters.
+	var viewModel: CharactersViewModel = PagedCharactersViewModel()
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		
+		navigationItem.title = viewModel.title
+		emptyListLabel.text = viewModel.emptyListMessage
+		
+		viewModel.delegate = self
+		
+		// Register cell classes.
+		CharacterTableViewCell.register(for: tableView)
+		
+		// Disable pull to refresh if viewModel can't reload data.
+		if viewModel is DataReloadable {
+			refreshContent()
+			showActivityIndicator()
+		}
+		else {
+			refreshControl = nil
+		}
+	}
+	
+	private func visibleIndexPaths(intersectingWith indexPaths: [IndexPath]) -> [IndexPath] {
+		let indexPathsForVisibleRows = tableView.indexPathsForVisibleRows ?? []
+		let indexPathsIntersection = Set(indexPathsForVisibleRows).intersection(indexPaths)
+		return Array(indexPathsIntersection)
+	}
+	
+	@IBAction func refreshContent(_ sender: Any? = nil) {
+		guard let reloadableViewModel = viewModel as? DataReloadable
+			else {
+				return
+		}
+		reloadableViewModel.reloadData()
+	}
+	
+	// MARK: - Navigation
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		switch segue.identifier {
+		case Segue.showCharacterDetail:
+			guard let selectedRow = tableView.indexPathForSelectedRow?.row,
+				let characterDetailViewController = segue.destination as? CharacterDetailViewController
+				else {
+					return
+			}
+			let characterDetailViewModel = CharacterDetailViewModel(character: viewModel.characters[selectedRow])
+			characterDetailViewController.viewModel = characterDetailViewModel
+		default:
+			break
+		}
+	}
+	
+}
+
+// MARK: - UITableViewDataSource
+extension CharactersViewController {
+	
+	override func numberOfSections(in tableView: UITableView) -> Int {
+		return 1
+	}
+	
+	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return viewModel.totalCharactersCount
+	}
+	
+	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		let cell = tableView.dequeueReusableCell(withIdentifier: CharacterTableViewCell.reuseIdentifier, for: indexPath)
+		
+		if let characterCell = cell as? CharacterTableViewCell {
+			if indexPath.row < viewModel.characters.count {
+				characterCell.configure(with: viewModel.characters[indexPath.row])
+			}
+			else {
+				characterCell.configure(with: .none)
+			}
+		}
+		
+		return cell
+	}
+	
+	override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+		return viewModel.canDeleteCharacters
+	}
+	
+	override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+		if (editingStyle == .delete) {
+			if let favoriteCharactersViewModel = viewModel as? FavoriteCharactersViewModel {
+				let character = favoriteCharactersViewModel.characters[indexPath.row]
+				favoriteCharactersViewModel.removeFromFavorites(character: character)
+				tableView.deleteRows(at: [indexPath], with: .fade)
+			}
+		}
+	}
+	
+}
+
+// MARK: - UITableViewDelegate
+extension CharactersViewController {
+	
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		performSegue(withIdentifier: Segue.showCharacterDetail, sender: nil)
+	}
+	
+}
+
+// MARK: - UITableViewDataSourcePrefetching
+extension CharactersViewController: UITableViewDataSourcePrefetching {
+	
+	func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+		guard let pagedViewModel = viewModel as? PagedViewModel
+			else {
+				return
+		}
+		
+		guard let firstRow = indexPaths.first?.row,
+			let lastRow = indexPaths.last?.row
+			else {
+				return
+		}
+		if lastRow > viewModel.characters.count || firstRow > viewModel.characters.count {
+			pagedViewModel.loadNextPageIfPossible()
+		}
+	}
+	
+}
+
+// MARK: - CharactersViewModelDelegate
+extension CharactersViewController: CharactersViewModelDelegate {
+	
+	func viewModel(_ viewModel: CharactersViewModel, didLoadDataFor indexPaths: [IndexPath]?) {
+		DispatchQueue.main.async {
+			self.refreshControl?.endRefreshingIfNeeded()
+			self.hideActivityIndicator()
+			
+			self.emptyListLabel.isHidden = viewModel.characters.count > 0
+			
+			guard let indexPaths = indexPaths
+				else {
+					self.tableView.reloadData()
+					return
+			}
+			
+			let indexPathsToReload = self.visibleIndexPaths(intersectingWith: indexPaths)
+			self.tableView.reloadRows(at: indexPathsToReload, with: .automatic)
+		}
+	}
+	
+	func viewModel(_ viewModel: CharactersViewModel, didFailLoadingWith error: Error) {
+		DispatchQueue.main.async {
+			self.hideActivityIndicator()
+			self.refreshControl?.endRefreshingIfNeeded()
+			print("Characters loading error: \(error)")
+			self.showAlert(for: error)
+		}
+	}
+	
+}
