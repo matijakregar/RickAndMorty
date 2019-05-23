@@ -12,5 +12,6 @@ struct BasicPropertyListItem: PropertyListDisplayable {
 	
 	let name: String
 	let value: CustomStringConvertible
+	let isSelectable: Bool = false
 	
 }

@@ -13,4 +13,6 @@ protocol PropertyListDisplayable {
 	var name: String { get }
 	var value: CustomStringConvertible { get }
 	
+	var isSelectable: Bool { get }
+	
 }

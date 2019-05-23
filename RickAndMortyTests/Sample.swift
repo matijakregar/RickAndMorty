@@ -6,7 +6,8 @@
 //  Copyright © 2019 Matija Kregar. All rights reserved.
 //
 
-import Foundation
+import XCTest
+@testable import RickAndMorty
 
 class Sample {
 	
@@ -18,6 +19,19 @@ class Sample {
 		}
 		
 		return try? Data(contentsOf: url)
+	}
+	
+	static func loadAndDecode<T: Decodable & Queryable>(named name: String, ofType fileType: String = "json") -> T? {
+		let bundle = Bundle(for: Sample.self)
+		guard let url = bundle.url(forResource: name, withExtension: fileType),
+			let data = try? Data(contentsOf: url),
+			let objectResponse = try? JSONDecoder().decode(ObjectResponse<T>.self, from: data)
+			else {
+				XCTFail("Unable to load and decode: \(name).\(fileType)")
+				return nil
+		}
+		
+		return objectResponse.object
 	}
 	
 }

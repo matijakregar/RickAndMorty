@@ -41,6 +41,12 @@ struct Theme {
 		UITableView.appearance().backgroundColor = Colors.background
 		
 		UIWindow.appearance().tintColor = Colors.accent
+		
+		RoundedButton.appearance().titleFont = UIFont.preferredFont(forTextStyle: .headline)
+		RoundedButton.appearance().backgroundColor = Colors.accent
+		RoundedButton.appearance().textColor = Colors.background
+		RoundedButton.appearance().cornerRadius = NSNumber(floatLiteral: 8.0)
+		RoundedButton.appearance().contentEdgeInsets = UIEdgeInsets(top: 12, left: 24, bottom: 12, right: 24)
 	}
 	
 }

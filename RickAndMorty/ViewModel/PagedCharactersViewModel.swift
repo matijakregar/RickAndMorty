@@ -13,6 +13,9 @@ class PagedCharactersViewModel: CharactersViewModel, PagedViewModel, DataReloada
 	private(set) var characters = [Character]()
 	private(set) var totalCharactersCount = 0
 	
+	let title = NSLocalizedString("All Characters", comment: "Screen title")
+	let emptyListMessage = NSLocalizedString("Couldn't load any characters.", comment: "Empty list message")
+	
 	weak var delegate: CharactersViewModelDelegate?
 	
 	private var nextPage = 1

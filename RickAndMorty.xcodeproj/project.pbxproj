@@ -51,6 +51,12 @@
 		D4109DF5229598F000597A49 /* StaticCharactersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DF4229598F000597A49 /* StaticCharactersViewModel.swift */; };
 		D4109DF722959A1600597A49 /* PagedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DF622959A1600597A49 /* PagedViewModel.swift */; };
 		D4109DF922959A6400597A49 /* DataReloadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DF822959A6400597A49 /* DataReloadable.swift */; };
+		D4109DFB22959E2F00597A49 /* FavoriteCharactersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DFA22959E2F00597A49 /* FavoriteCharactersViewModel.swift */; };
+		D4109DFE22959F6200597A49 /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DFD22959F6200597A49 /* FavoritesManager.swift */; };
+		D4109E002295A94C00597A49 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109DFF2295A94C00597A49 /* UIButton.swift */; };
+		D4109E022295ADF500597A49 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109E012295ADF500597A49 /* MainTabBarController.swift */; };
+		D4109E042296800000597A49 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109E032296800000597A49 /* RoundedButton.swift */; };
+		D4109E06229687F100597A49 /* FavoritesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4109E05229687F100597A49 /* FavoritesTest.swift */; };
 		D4580FB22292A16200D0E8F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4580FB12292A16200D0E8F7 /* AppDelegate.swift */; };
 		D4580FB92292A16200D0E8F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4580FB72292A16200D0E8F7 /* Main.storyboard */; };
 		D4580FBB2292A16300D0E8F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4580FBA2292A16300D0E8F7 /* Assets.xcassets */; };
@@ -121,6 +127,12 @@
 		D4109DF4229598F000597A49 /* StaticCharactersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticCharactersViewModel.swift; sourceTree = "<group>"; };
 		D4109DF622959A1600597A49 /* PagedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagedViewModel.swift; sourceTree = "<group>"; };
 		D4109DF822959A6400597A49 /* DataReloadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataReloadable.swift; sourceTree = "<group>"; };
+		D4109DFA22959E2F00597A49 /* FavoriteCharactersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCharactersViewModel.swift; sourceTree = "<group>"; };
+		D4109DFD22959F6200597A49 /* FavoritesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesManager.swift; sourceTree = "<group>"; };
+		D4109DFF2295A94C00597A49 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		D4109E012295ADF500597A49 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		D4109E032296800000597A49 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		D4109E05229687F100597A49 /* FavoritesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTest.swift; sourceTree = "<group>"; };
 		D4580FAE2292A16200D0E8F7 /* RickAndMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4580FB12292A16200D0E8F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4580FB82292A16200D0E8F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -199,9 +211,10 @@
 			children = (
 				D4109DB122941F5600597A49 /* Protocols */,
 				D4109DB6229421FD00597A49 /* PagedCharactersViewModel.swift */,
+				D4109DF4229598F000597A49 /* StaticCharactersViewModel.swift */,
+				D4109DFA22959E2F00597A49 /* FavoriteCharactersViewModel.swift */,
 				D4109DE12295703300597A49 /* CharacterDetailViewModel.swift */,
 				D4109DF12295920500597A49 /* LocationDetailViewModel.swift */,
-				D4109DF4229598F000597A49 /* StaticCharactersViewModel.swift */,
 				D4109DE9229572E100597A49 /* BasicPropertyListItem.swift */,
 				D4109DEB2295734700597A49 /* LocationItem.swift */,
 				D4109DEF2295912C00597A49 /* CharactersItem.swift */,
@@ -235,6 +248,7 @@
 		D4109DB92294262E00597A49 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D4109E012295ADF500597A49 /* MainTabBarController.swift */,
 				D4109DBA2294267D00597A49 /* CharactersViewController.swift */,
 				D4109DDC229567D600597A49 /* CharacterDetailViewController.swift */,
 				D4109DED22958F7300597A49 /* LocationDetailViewController.swift */,
@@ -263,6 +277,7 @@
 				D4109DCF229534E300597A49 /* TimeInterval.swift */,
 				D4109DD82295621600597A49 /* UIRefreshControl.swift */,
 				D4109DDA2295643100597A49 /* UIColor.swift */,
+				D4109DFF2295A94C00597A49 /* UIButton.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -280,6 +295,7 @@
 			isa = PBXGroup;
 			children = (
 				D4109DD6229551D100597A49 /* Theme.swift */,
+				D4109E032296800000597A49 /* RoundedButton.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -300,6 +316,14 @@
 				D4580FBA2292A16300D0E8F7 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		D4109DFC22959F4000597A49 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				D4109DFD22959F6200597A49 /* FavoritesManager.swift */,
+			);
+			path = Persistence;
 			sourceTree = "<group>";
 		};
 		D4580FA52292A16200D0E8F7 = {
@@ -326,6 +350,7 @@
 				D4580FBF2292A16300D0E8F7 /* Info.plist */,
 				D4109D992293EEDD00597A49 /* Constants.swift */,
 				D4580FB12292A16200D0E8F7 /* AppDelegate.swift */,
+				D4109DFC22959F4000597A49 /* Persistence */,
 				D4580FD42292A4ED00D0E8F7 /* Networking */,
 				D4580FD32292A4DD00D0E8F7 /* Model */,
 				D4109DB022941F4300597A49 /* ViewModel */,
@@ -343,6 +368,7 @@
 				D4109D8E2293D28700597A49 /* Sample.swift */,
 				D4109D902293D2A800597A49 /* DecodingTests.swift */,
 				D4109D962293E5D200597A49 /* QueryTests.swift */,
+				D4109E05229687F100597A49 /* FavoritesTest.swift */,
 				D4580FCA2292A16300D0E8F7 /* Info.plist */,
 			);
 			path = RickAndMortyTests;
@@ -493,6 +519,7 @@
 			files = (
 				D4109DE22295703300597A49 /* CharacterDetailViewModel.swift in Sources */,
 				D4109DE52295718E00597A49 /* PropertyTableViewCell.swift in Sources */,
+				D4109E022295ADF500597A49 /* MainTabBarController.swift in Sources */,
 				D4109DD0229534E300597A49 /* TimeInterval.swift in Sources */,
 				D4580FB22292A16200D0E8F7 /* AppDelegate.swift in Sources */,
 				D4109DA02293F0A500597A49 /* HTTPMethod.swift in Sources */,
@@ -501,6 +528,7 @@
 				D4109DF5229598F000597A49 /* StaticCharactersViewModel.swift in Sources */,
 				D4109DD322953E6200597A49 /* CharacterTableViewCell.swift in Sources */,
 				D4580FD82292B51E00D0E8F7 /* Location.swift in Sources */,
+				D4109DFB22959E2F00597A49 /* FavoriteCharactersViewModel.swift in Sources */,
 				D4109DF722959A1600597A49 /* PagedViewModel.swift in Sources */,
 				D4109DA42293F0FF00597A49 /* NetworkingManager.swift in Sources */,
 				D4109DB322941F8700597A49 /* CharactersViewModel.swift in Sources */,
@@ -508,6 +536,7 @@
 				D4109DAD2293F45800597A49 /* PostParameterEncoder.swift in Sources */,
 				D4109DB52294209A00597A49 /* CharactersViewModelDelegate.swift in Sources */,
 				D4109D9E2293EFD100597A49 /* NetworkingError.swift in Sources */,
+				D4109E002295A94C00597A49 /* UIButton.swift in Sources */,
 				D4109DAB2293F43E00597A49 /* HeaderEncoder.swift in Sources */,
 				D4109DD7229551D100597A49 /* Theme.swift in Sources */,
 				D4109DBB2294267D00597A49 /* CharactersViewController.swift in Sources */,
@@ -528,6 +557,7 @@
 				D4109DC32295297C00597A49 /* NSObject.swift in Sources */,
 				D4109DC02295294600597A49 /* NibBackedCell.swift in Sources */,
 				D4109D9C2293EFA200597A49 /* Endpoint.swift in Sources */,
+				D4109DFE22959F6200597A49 /* FavoritesManager.swift in Sources */,
 				D4109DDB2295643100597A49 /* UIColor.swift in Sources */,
 				D4109DEE22958F7300597A49 /* LocationDetailViewController.swift in Sources */,
 				D4109DCA2295306900597A49 /* CharacterListDisplayable.swift in Sources */,
@@ -535,6 +565,7 @@
 				D4109DA62293F22E00597A49 /* QueryEndpoint.swift in Sources */,
 				D4109DB7229421FD00597A49 /* PagedCharactersViewModel.swift in Sources */,
 				D4109DEA229572E100597A49 /* BasicPropertyListItem.swift in Sources */,
+				D4109E042296800000597A49 /* RoundedButton.swift in Sources */,
 				D487F7B422933FE60019D9B3 /* Info.swift in Sources */,
 				D4109DD92295621600597A49 /* UIRefreshControl.swift in Sources */,
 			);
@@ -545,6 +576,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4109D912293D2A800597A49 /* DecodingTests.swift in Sources */,
+				D4109E06229687F100597A49 /* FavoritesTest.swift in Sources */,
 				D4109D8F2293D28700597A49 /* Sample.swift in Sources */,
 				D4109D972293E5D200597A49 /* QueryTests.swift in Sources */,
 			);

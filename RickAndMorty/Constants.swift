@@ -27,4 +27,18 @@ struct Constants {
 		
 	}
 	
+	struct UserDefaults {
+		
+		struct Key {
+			static let favoriteCharacters = "favoriteCharacters"
+		}
+		
+	}
+	
+	struct Notification {
+		
+		static let favoritesChanged = "Notification.favoritesChanged"
+		
+	}
+	
 }

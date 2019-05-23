@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Location: Decodable {
+struct Location: Codable {
 	
 	// MARK: - Properties
 	

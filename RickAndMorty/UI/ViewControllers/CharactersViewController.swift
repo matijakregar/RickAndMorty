@@ -10,11 +10,16 @@ import UIKit
 
 class CharactersViewController: UITableViewController {
 	
+	@IBOutlet private var emptyListLabel: UILabel!
+	
 	// Default view model contains all available characters.
 	var viewModel: CharactersViewModel = PagedCharactersViewModel()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
+		navigationItem.title = viewModel.title
+		emptyListLabel.text = viewModel.emptyListMessage
 		
 		viewModel.delegate = self
 		
@@ -126,6 +131,8 @@ extension CharactersViewController: CharactersViewModelDelegate {
 	func viewModel(_ viewModel: CharactersViewModel, didLoadDataFor indexPaths: [IndexPath]?) {
 		DispatchQueue.main.async {
 			self.refreshControl?.endRefreshingIfNeeded()
+			
+			self.emptyListLabel.isHidden = viewModel.characters.count > 0
 			
 			guard let indexPaths = indexPaths
 				else {

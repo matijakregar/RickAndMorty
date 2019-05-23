@@ -16,8 +16,11 @@ class CharacterTableViewCell: UITableViewCell, NibBackedTableViewCell {
 	@IBOutlet private var speciesLabel: UILabel!
 	@IBOutlet private var loadingIndicator: UIActivityIndicatorView!
 	
-	private var imageDataTask: URLSessionDataTask?
-	private var currentURL: URL?
+	private var imageDataTask: URLSessionDataTask? {
+		didSet {
+			oldValue?.cancel()
+		}
+	}
 	
 	override func awakeFromNib() {
 		super.awakeFromNib()
@@ -29,7 +32,7 @@ class CharacterTableViewCell: UITableViewCell, NibBackedTableViewCell {
 		super.prepareForReuse()
 		
 		// Cancel the previous image from getting loaded and presenting any unwanted results.
-		imageDataTask?.cancel()
+		imageDataTask?.suspend()
 		nameLabel.text = ""
 		speciesLabel.text = ""
 		setHighlighted(false, animated: false)
@@ -48,12 +51,13 @@ class CharacterTableViewCell: UITableViewCell, NibBackedTableViewCell {
 			nameLabel.text = character.name
 			speciesLabel.text = character.species
 			
-			// TODO: check if this can be solved nicely
-			// An ugly hack to prevent blinking images
-			if currentURL != character.imageURL {
+			if imageDataTask?.state == .suspended,
+				imageDataTask?.currentRequest?.url == character.imageURL {
+				imageDataTask?.resume()
+			}
+			else {
 				characterImageView.image = nil
 				imageDataTask = characterImageView.loadImage(from: character.imageURL)
-				currentURL = character.imageURL
 			}
 			containerView.fadeIn()
 			loadingIndicator.stopAnimating()

@@ -29,6 +29,8 @@ class LocationDetailViewController: UITableViewController {
 				return
 		}
 		
+		navigationItem.title = location.name
+		
 		locationNameLabel.text = location.name
 		
 		loadContent()
@@ -49,12 +51,11 @@ class LocationDetailViewController: UITableViewController {
 	}
 	
 	private func isSelectable(row: Int) -> Bool {
-		guard let charactersItem = viewModel?.propertyListItems[row] as? CharactersItem,
-			charactersItem.characters.count > 0
+		guard let listItem = viewModel?.propertyListItems[row]
 			else {
 				return false
 		}
-		return true
+		return listItem.isSelectable
 	}
 	
 	// MARK: - Navigation
@@ -67,7 +68,7 @@ class LocationDetailViewController: UITableViewController {
 				else {
 					return
 			}
-			let charactersViewModel = StaticCharactersViewModel(characters: charactersItem.characters)
+			let charactersViewModel = StaticCharactersViewModel(characters: charactersItem.characters, title: charactersItem.name)
 			charactersViewController.viewModel = charactersViewModel
 		default:
 			break

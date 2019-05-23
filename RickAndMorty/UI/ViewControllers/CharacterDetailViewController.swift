@@ -14,6 +14,8 @@ class CharacterDetailViewController: UITableViewController {
 	@IBOutlet private var footerContainerView: UIView!
 	@IBOutlet private var characterImageView: UIImageView!
 	@IBOutlet private var characterNameLabel: UILabel!
+	@IBOutlet private var favoriteButton: UIButton!
+	@IBOutlet private var favoriteIcon: UIImageView!
 	
 	var viewModel: CharacterDetailViewModel?
 	
@@ -32,8 +34,12 @@ class CharacterDetailViewController: UITableViewController {
 				return
 		}
 		
+		navigationItem.title = character.name
+		
 		characterImageView.loadImage(from: character.imageURL)
 		characterNameLabel.text = character.name
+		
+		adjustFavoriteDisplay(to: character)
 		
 		loadContent()
 	}
@@ -53,12 +59,36 @@ class CharacterDetailViewController: UITableViewController {
 	}
 	
 	private func isSelectable(row: Int) -> Bool {
-		guard let locationItem = viewModel?.propertyListItems[row] as? LocationItem,
-			locationItem.location.id != .none
+		guard let listItem = viewModel?.propertyListItems[row]
 			else {
 				return false
 		}
-		return true
+		return listItem.isSelectable
+	}
+	
+	private func adjustFavoriteDisplay(to character: Character) {
+		if character.isFavorite {
+			favoriteButton.setTitle(NSLocalizedString("Remove from Favorites", comment: "Favorites button title"))
+		}
+		else {
+			favoriteButton.setTitle(NSLocalizedString("Add to Favorites", comment: "Favorites button title"))
+		}
+		favoriteIcon.isHidden = !character.isFavorite
+	}
+	
+	@IBAction func toggleFavorite(_ sender: Any? = nil) {
+		guard let character = viewModel?.character
+			else {
+				return
+		}
+		if character.isFavorite {
+			FavoritesManager.removeFavorite(character: character)
+		}
+		else {
+			FavoritesManager.addFavorite(character: character)
+		}
+		
+		adjustFavoriteDisplay(to: character)
 	}
 	
 	// MARK: - Navigation
