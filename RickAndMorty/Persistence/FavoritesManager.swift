@@ -13,18 +13,18 @@ struct FavoritesManager {
 	// Using user defaults to persist favorite characters is a quick solution. Ideally something like CoreData would be used.
 	private static var userDefaults = UserDefaults.standard
 	
-	static func addFavorite(character: Character) {
+	static func addFavorite(character: RMCharacter) {
 		var favorites = [character]
 		if let existingFavorites = favoriteCharacters {
 			favorites.append(contentsOf: existingFavorites)
 		}
 		
-		let noDuplicatesFavorites: [Character] = Array(Set(favorites))
+		let noDuplicatesFavorites: [RMCharacter] = Array(Set(favorites))
 
 		saveFavorite(characters: noDuplicatesFavorites)
 	}
 	
-	static func removeFavorite(character :Character) {
+	static func removeFavorite(character: RMCharacter) {
 		guard let existingFavorites = favoriteCharacters
 			else {
 				return
@@ -35,7 +35,7 @@ struct FavoritesManager {
 		saveFavorite(characters: filteredFavorites)
 	}
 	
-	private static func saveFavorite(characters: [Character]) {
+	private static func saveFavorite(characters: [RMCharacter]) {
 		guard let favoritesData = try? JSONEncoder().encode(characters)
 			else {
 				return
@@ -45,14 +45,14 @@ struct FavoritesManager {
 		NotificationCenter.default.post(name: NSNotification.Name(Constants.Notification.favoritesChanged), object: nil)
 	}
 	
-	static var favoriteCharacters: [Character]? {
+	static var favoriteCharacters: [RMCharacter]? {
 		get {
 			guard let charactersData = userDefaults.value(forKey: Constants.UserDefaults.Key.favoriteCharacters) as? Data
 				else {
 					return nil
 			}
 			
-			let characters = try? JSONDecoder().decode([Character].self, from: charactersData)
+			let characters = try? JSONDecoder().decode([RMCharacter].self, from: charactersData)
 			return characters
 		}
 	}

@@ -16,7 +16,7 @@ struct Location: Codable {
 	let name: String
 	let type: String?
 	let dimension: String?
-	let residents: [Character]?
+	let residents: [RMCharacter]?
 	
 	// MARK: - Coding keys
 	
@@ -37,7 +37,7 @@ extension Location.CodingKeys: QueryKey {
 	var queryParameter: String {
 		switch self {
 		case .residents:
-			return stringValue + " " + Character.shortQuery
+			return stringValue + " " + RMCharacter.shortQuery
 		default:
 			return stringValue
 		}

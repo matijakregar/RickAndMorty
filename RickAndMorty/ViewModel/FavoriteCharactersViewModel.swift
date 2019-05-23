@@ -10,7 +10,7 @@ import Foundation
 
 class FavoriteCharactersViewModel: CharactersViewModel, DataReloadable {
 	
-	private(set) var characters = [Character]()
+	private(set) var characters = [RMCharacter]()
 	var totalCharactersCount: Int {
 		return characters.count
 	}
@@ -29,16 +29,16 @@ class FavoriteCharactersViewModel: CharactersViewModel, DataReloadable {
 	@objc func reloadData() {
 		guard let retrievedCharacters = FavoritesManager.favoriteCharacters
 			else {
-				characters = [Character]()
+				characters = [RMCharacter]()
 				return
 		}
 		characters = retrievedCharacters
 		delegate?.viewModel(self, didLoadDataFor: .none)
 	}
 	
-	func removeFromFavorites(character: Character) {
+	func removeFromFavorites(character: RMCharacter) {
 		FavoritesManager.removeFavorite(character: character)
-		characters = FavoritesManager.favoriteCharacters ?? [Character]()
+		characters = FavoritesManager.favoriteCharacters ?? [RMCharacter]()
 	}
 	
 }

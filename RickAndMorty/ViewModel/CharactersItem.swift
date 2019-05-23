@@ -11,7 +11,7 @@ import Foundation
 struct CharactersItem: PropertyListDisplayable {
 	
 	let name: String
-	let characters: [Character]
+	let characters: [RMCharacter]
 	
 	var value: CustomStringConvertible {
 		return NSLocalizedString("View all", comment: "")

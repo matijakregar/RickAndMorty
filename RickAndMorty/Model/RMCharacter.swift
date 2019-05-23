@@ -1,5 +1,5 @@
 //
-//  Character.swift
+//  RMCharacter.swift
 //  RickAndMorty
 //
 //  Created by Matija Kregar on 20/05/2019.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Character: Codable {
+struct RMCharacter: Codable {
 	
 	// MARK: - Properties
 	
@@ -34,7 +34,7 @@ struct Character: Codable {
 
 // MARK: - Queryable
 
-extension Character.CodingKeys: QueryKey {
+extension RMCharacter.CodingKeys: QueryKey {
 	// Define how the query is generated and which properties have nested queries.
 	var queryParameter: String {
 		switch self {
@@ -47,7 +47,7 @@ extension Character.CodingKeys: QueryKey {
 	
 }
 
-extension Character: Queryable {
+extension RMCharacter: Queryable {
 	
 	static var shortQuery: String {
 		return query(for: [
@@ -70,22 +70,22 @@ extension Character: Queryable {
 
 // MARK: - CharacterListDisplayable
 
-extension Character: CharacterListDisplayable {
+extension RMCharacter: CharacterListDisplayable {
 	
 }
 
 
 // MARK: - Equatable & Hashable
 
-extension Character: Equatable {
+extension RMCharacter: Equatable {
 	
-	static func == (lhs: Character, rhs: Character) -> Bool {
+	static func == (lhs: RMCharacter, rhs: RMCharacter) -> Bool {
 		return lhs.id == rhs.id
 	}
 
 }
 
-extension Character: Hashable {
+extension RMCharacter: Hashable {
 	
 	func hash(into hasher: inout Hasher) {
 		hasher.combine(id)
@@ -95,7 +95,7 @@ extension Character: Hashable {
 
 // MARK: - Favorites
 
-extension Character {
+extension RMCharacter {
 	
 	var isFavorite: Bool {
 		guard let favorites = FavoritesManager.favoriteCharacters
